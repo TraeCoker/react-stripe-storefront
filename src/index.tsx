@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import './index.css';
@@ -12,7 +13,9 @@ export const stripePromise = loadStripe(
 ReactDOM.render(
   <React.StrictMode>
     <Elements stripe={stripePromise}>
-        <App />
+        <Router>
+          <App />
+        </Router>
     </Elements>
   </React.StrictMode>,
   document.getElementById('root')

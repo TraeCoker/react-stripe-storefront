@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
 
 
@@ -6,7 +9,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <Routes>
+
+      </Routes>
     </div>
   );
 }
