@@ -5,6 +5,30 @@ import { useUser, AuthCheck } from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
 
+export function SignIn() {
+  const signIn = async () => {
+    const credential = await auth.signInWithPopup(
+      new firebase.auth.GoogleAuthProvider()
+    );
+    const { uid, email } = credential.user;
+    db.collection('users').doc(uid).set({ email }, { merge: true });
+  };
+
+  return (
+    <button onClick={signIn}>
+      Sign in with Google
+    </button>
+  )
+};
+
+export function SignOut(props){
+  return props.user && (
+
+    <button onClick={() => auth.signOut()}>
+      Sign Out User {props.user.uid}
+    </button>
+  )
+}
 
 
 function SaveCard(props): JSX.Element {
