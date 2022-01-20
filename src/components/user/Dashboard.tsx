@@ -5,6 +5,8 @@ import { useUser, AuthCheck } from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
 
+
+
 function SaveCard(props): JSX.Element {
   const stripe = useStripe();
   const elements = useElements();
@@ -66,7 +68,17 @@ function SaveCard(props): JSX.Element {
     </>
   )
 }
-export const Dashboard = (): JSX.Element => {
+
+function CreditCard(props) {
+  const { last4, brand, exp_month, exp_year } = props.card
+  return(
+    <option>
+      {brand} **** **** **** {last4} expires {exp_month}/{exp_year}
+    </option>
+  )
+}
+
+export default function Dashboard(): JSX.Element {
     return( 
         <div>
           <h1>Dashboard</h1>
