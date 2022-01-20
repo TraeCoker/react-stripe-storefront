@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Subscriptions = () => {
+export const Subscriptions = (): JSX.Element => {
 
     return( 
         <div>

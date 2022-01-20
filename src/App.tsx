@@ -9,11 +9,11 @@ import './App.css';
 
 
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <Navbar />
-      
+
       <Routes>
         <Route path="/" element={ <Home /> } /> 
         <Route path="/courses" element={ <Courses /> } />
