@@ -1,7 +1,9 @@
 const API = 'http://localhost:3000';
 
 type Opts = {
+    /**Requests other than default 'POST' */
     method?: string,
+    /**Optional body for 'POST' and 'PATCH' requests */
     body?: {},
 };
 
