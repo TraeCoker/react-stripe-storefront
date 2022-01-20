@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchFromApi } from '../helpers/helpers';
+import { fetchFromAPI } from '../helpers/helpers';
 import { useStripe } from '@stripe/react-stripe-js';
 
 type Product = {
@@ -28,6 +28,22 @@ export const Checkout = (): JSX.Element  => {
   const changeQuantity = (v: number): void => 
     setProduct({...product, quantity: Math.max(0, product.quantity + v) });
 
+  const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    const body = { line_items: [product] }
+    const { id: sessionId } = await fetchFromAPI('checkouts',{
+      body
+    });
+
+    const { error } = await stripe!.redirectToCheckout({
+      sessionId,
+    });
+
+    if (error) {
+      console.log(error);
+    }
+  }
+
+
   return ( 
     <>
 
@@ -51,6 +67,12 @@ export const Checkout = (): JSX.Element  => {
       </div>
 
       <hr />
+
+      <button
+        onClick={handleClick}
+        disabled={product.quantity < 1}>
+        Start Checkout
+      </button>
     </>
   )
 };
