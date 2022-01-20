@@ -4,13 +4,15 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser, AuthCheck } from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
+import { User} from 'firebase/auth';
+
 
 export function SignIn() {
   const signIn = async () => {
-    const credential = await auth.signInWithPopup(
+    const credential: any = await auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
     );
-    const { uid, email } = credential.user;
+    const { uid, email} = credential.user;
     db.collection('users').doc(uid).set({ email }, { merge: true });
   };
 
@@ -48,6 +50,29 @@ function SaveCard(props): JSX.Element {
     setSetupIntent(setupIntent);
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const cardElement = elements?.getElement(CardElement)
+
+    const {
+      setupIntent: updatedSetupIntent,
+      error,
+    } = await stripe?.confirmCardSetup(setupIntent.client_secret, {
+      payment_method: {card: cardElement},
+    });
+
+    if (error) {
+      alert(error.message);
+      console.log(error);
+    } else {
+      setSetupIntent(updatedSetupIntent);
+      await getWallet();
+      alert('Success! Card added to your wallet');
+    }
+  };
+
+  
   const getWallet = async () => {
     if (user){
       const paymentMethods = await fetchFromAPI('wallet', {method: 'GET' })
@@ -102,11 +127,13 @@ function CreditCard(props) {
   )
 }
 
-export default function Dashboard(): JSX.Element {
+export const Dashboard = (): JSX.Element => {
     return( 
         <div>
           <h1>Dashboard</h1>
-          <SaveCard/>
+          <Suspense fallback={'loading user'}>
+            <SaveCard/>
+          </Suspense>
         </div>
       );
 };
