@@ -1,4 +1,6 @@
 import React from 'react';
+import { AuthProvider, useFirebaseApp  } from 'reactfire';
+import { getAuth } from 'firebase/auth';
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './components/home/Home';
 import { Courses } from './components/courses/Courses';
@@ -9,8 +11,13 @@ import './App.css';
 
 
 
+
 const App = (): JSX.Element => {
+  const app = useFirebaseApp();
+  const auth = getAuth(app);
+
   return (
+    <AuthProvider sdk={auth}>
     <div className="App">
       <Navbar />
 
@@ -21,6 +28,7 @@ const App = (): JSX.Element => {
         <Route path="/dashboard" element={ <Dashboard /> } />
       </Routes>
     </div>
+    </AuthProvider>
   );
 }
 
