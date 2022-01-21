@@ -14,7 +14,7 @@ export const stripePromise = loadStripe(
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <FirebaseAppProvider firebaseConfig={firebaseConfig} suspense={true}>
       <Elements stripe={stripePromise}>
         <Router>
           <App />
