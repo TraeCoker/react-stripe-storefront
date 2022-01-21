@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { useUser, AuthCheck } from 'reactfire';
+import { useUser, AuthCheck, ObservableStatus } from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
+import { Stripe, SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
 import { User} from 'firebase/auth';
 
 
@@ -23,7 +24,7 @@ export function SignIn() {
   )
 };
 
-export function SignOut(props){
+export function SignOut(props: any){
   return props.user && (
 
     <button onClick={() => auth.signOut()}>
@@ -33,24 +34,30 @@ export function SignOut(props){
 }
 
 
-function SaveCard(props): JSX.Element {
-  const stripe = useStripe();
+function SaveCard(): JSX.Element {
+  const stripe: Stripe | null = useStripe();
   const elements = useElements();
   const user = useUser();
 
-  const [setupIntent, setSetupIntent] = useState();
-  const [wallet, setWallet] = useState();
+  const [setupIntent, setSetupIntent] = useState<SetupIntent | null>();
+  const [wallet, setWallet] = useState<PaymentMethod[] | []>([]);
+
+
 
   useEffect(() => {
     getWallet();
   }, [user]);
 
-  const createSetupIntent = async (event) => {
-    const setupIntent = await fetchFromAPI('wallet')
-    setSetupIntent(setupIntent);
+
+
+  const createSetupIntent = async () => {
+    const si: SetupIntent = await fetchFromAPI('wallet')
+    setSetupIntent(si);
   };
 
-  const handleSubmit = async (event) => {
+
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const cardElement = elements?.getElement(CardElement)
@@ -58,8 +65,8 @@ function SaveCard(props): JSX.Element {
     const {
       setupIntent: updatedSetupIntent,
       error,
-    } = await stripe?.confirmCardSetup(setupIntent.client_secret, {
-      payment_method: {card: cardElement},
+    } = await stripe!.confirmCardSetup(setupIntent?.client_secret!, {
+      payment_method: {card: cardElement as StripeCardElement},
     });
 
     if (error) {
@@ -72,7 +79,7 @@ function SaveCard(props): JSX.Element {
     }
   };
 
-  
+
   const getWallet = async () => {
     if (user){
       const paymentMethods = await fetchFromAPI('wallet', {method: 'GET' })
@@ -87,7 +94,7 @@ function SaveCard(props): JSX.Element {
         <div>
           <button
             onClick={createSetupIntent}
-            hidden={setupIntent}>
+            hidden={setupIntent? true : false}>
             Attach New Credit Card 
           </button>
         </div>
@@ -104,8 +111,8 @@ function SaveCard(props): JSX.Element {
         <div>
           <h3>Retrieve all Payment Resources</h3>
           <select>
-            {wallet.map((paymentSource) => (
-              <CreditCard key={paymentSource.id} card={paymentSource.card} />
+            {wallet.map((paymentSource: PaymentMethod) => (
+              <CreditCard key={paymentSource.id} card={paymentSource.card!} />
             ))}
           </select>
         </div>
@@ -118,14 +125,22 @@ function SaveCard(props): JSX.Element {
   )
 }
 
-function CreditCard(props) {
+type Card = {
+  /**ID returned by PaymentMethod */
+  key: string,
+  /**Object for individual credit cards */
+  card: PaymentMethod.Card
+};
+
+
+function CreditCard(props: Card) {
   const { last4, brand, exp_month, exp_year } = props.card
   return(
     <option>
       {brand} **** **** **** {last4} expires {exp_month}/{exp_year}
     </option>
   )
-}
+};
 
 export const Dashboard = (): JSX.Element => {
     return( 
