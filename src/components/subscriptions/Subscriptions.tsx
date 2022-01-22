@@ -11,7 +11,7 @@ interface UserDataProps {
   user: User
 };
 
-function UserData(props: UserDataProps) {
+function UserData(props: UserDataProps): JSX.Element {
   const [data, setData ] = useState<DocumentData | null>();
 
   useEffect(
@@ -29,7 +29,38 @@ function UserData(props: UserDataProps) {
     </pre>
   );
 
-}
+};
+
+function SubscribeToPlan(props) {
+  const stripe = useStripe();
+  const elements = useElements();
+  const user = useUser();
+
+  const [ plan, setPlan ] = useState();
+  const [ subscriptions, setSubscriptions ] = useState([]);
+  const [ loading, setLoading ] = useState(false);
+
+  useEffect(() => {
+    getSubscriptions();
+  }, [user]);
+
+  const getSubscriptions = async (): Promise<void> => {
+    if (user) {
+      const subs = await fetchFromAPI('subscriptions', { method: 'GET' });
+      setSubscriptions(subs);
+
+    }
+  };
+
+  const cancel = async (id: string): Promise<void> => {
+    setLoading(true);
+    await fetchFromAPI('sunscriptions/' + id, { method: 'PATCH' });
+    alert('canceled');
+    await getSubscriptions();
+    setLoading(false);
+  }
+  
+};
 
 
 
