@@ -1,12 +1,15 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import {  CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser, AuthCheck } from 'reactfire';
 import { db } from '../helpers/firebase';
 import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { ObservableStatus } from 'reactfire';
 import { User } from 'firebase/auth';
+
+
+
 
 
 interface UserDataProps {
@@ -32,6 +35,7 @@ function UserData(props: UserDataProps): JSX.Element {
   );
 
 };
+
 
 function SubscribeToPlan(props) {
   const stripe = useStripe();
@@ -99,13 +103,29 @@ function SubscribeToPlan(props) {
           </button>
         </form>
 
-        
+        <div>
+          <h3>Manage Current Subscriptions</h3>
+          <div>
+            {subscriptions.map((sub) => (
+              <div key={sub.id}>
+                {sub.id}. Next payment of {sub.plan.amount} due{' '}
+                {new Date(sub.currnet_period_end * 1000).toUTCString()}
+                <button
+                  onClick={() => cancel(sub.id)}
+                  disabled={loading}>
+                  Cancel
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
 
+        <div>
+          <SignOut user={user} />
+        </div>
       </AuthCheck>
-
-
     </>
-  )
+  );
 };
 
 
