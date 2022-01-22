@@ -91,6 +91,16 @@ function SubscribeToPlan(props) {
         </div>
         <hr />
 
+        <form onSubmit={handleSubmit} hidden={!plan}>
+
+          <CardElement />
+          <button type="submit" disabled={loading}>
+            Subscribe and Pay
+          </button>
+        </form>
+
+        
+
       </AuthCheck>
 
 
