@@ -5,7 +5,9 @@ import { useUser, AuthCheck } from 'reactfire';
 import { db } from '../helpers/firebase';
 import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
+import { ObservableStatus } from 'reactfire';
 import { User } from 'firebase/auth';
+
 
 interface UserDataProps {
   user: User
@@ -36,7 +38,7 @@ function SubscribeToPlan(props) {
   const elements = useElements();
   const user = useUser();
 
-  const [ plan, setPlan ] = useState();
+  const [ plan, setPlan ] = useState<string | null>(null);
   const [ subscriptions, setSubscriptions ] = useState([]);
   const [ loading, setLoading ] = useState(false);
 
@@ -59,7 +61,41 @@ function SubscribeToPlan(props) {
     await getSubscriptions();
     setLoading(false);
   }
-  
+
+
+
+  return (
+    <>
+      <AuthCheck fallback={<SignIn />}>
+        <div>
+          {user?.uid && <UserData user={user} />}
+        </div>
+
+        <hr />
+
+        <div>
+
+          <button
+            onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
+            Choose Monthly $25/m
+          </button>
+
+          <button
+            onClick={() => setPlan('price_1KHf5OEFpPobBmTkLpTaKnk4')}>
+            Choose Quarterly $50/q 
+          </button>
+
+          <p>
+            Selected Plan: <strong>{plan}</strong>
+          </p>
+        </div>
+        <hr />
+
+      </AuthCheck>
+
+
+    </>
+  )
 };
 
 
