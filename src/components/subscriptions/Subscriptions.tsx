@@ -7,6 +7,7 @@ import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { ObservableStatus } from 'reactfire';
 import { User } from 'firebase/auth';
+import { PaymentMethodResult } from '@stripe/stripe-js';
 
 
 
@@ -37,6 +38,7 @@ function UserData(props: UserDataProps): JSX.Element {
 };
 
 
+
 function SubscribeToPlan(props) {
   const stripe = useStripe();
   const elements = useElements();
@@ -64,7 +66,56 @@ function SubscribeToPlan(props) {
     alert('canceled');
     await getSubscriptions();
     setLoading(false);
-  }
+  };
+  
+  const handleSubmit = async (event) => {
+    setLoading(true);
+    event.preventDefault();
+
+    const cardElement = elements?.getElement(CardElement);
+
+    const { paymentMethod, error } = await stripe?.createPaymentMethod({
+      type: 'card',
+      card: cardElement,
+    });
+
+    if (error) {
+      alert(error.message);
+      setLoading(false);
+      return;
+    };
+
+    const subscription = await fetchFromAPI('subscriptions', {
+      body: {
+        plan, 
+        payment_method: paymentMethod.id,
+      },
+    });
+
+    const { latest_invoice } = subscription;
+
+    if (latest_invoice.payment_intent) {
+      const { client_secret, status } = latest_invoice.payment_intent;
+
+      if(status === 'requires_action') {
+        const { error: confirmationError } = await stripe?.confirmCardPayment(
+          client_secret
+        );
+        
+        if (confirmationError) {
+          console.error(confirmationError);
+          alert('unable to confirm card');
+          return
+        }
+      }
+
+      alert('You are subscribed!');
+      getSubscriptions();
+    }
+
+    setLoading(false);
+    setPlan(null);
+  };
 
 
 
@@ -109,7 +160,7 @@ function SubscribeToPlan(props) {
             {subscriptions.map((sub) => (
               <div key={sub.id}>
                 {sub.id}. Next payment of {sub.plan.amount} due{' '}
-                {new Date(sub.currnet_period_end * 1000).toUTCString()}
+                {new Date(sub.current_period_end * 1000).toUTCString()}
                 <button
                   onClick={() => cancel(sub.id)}
                   disabled={loading}>
