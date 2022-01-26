@@ -17,7 +17,8 @@ interface UserDataProps {
 };
 
 function UserData(props: any): JSX.Element {
-  const [data, setData ] = useState<DocumentData | null>();
+  const [data, setData ] = useState<DocumentData | null | undefined>(null);
+  
 
   useEffect(
     () => {
@@ -29,8 +30,8 @@ function UserData(props: any): JSX.Element {
 
   return (
     <pre>
-      Stripe Customer ID: {data!.stripeCustomerId} <br />
-      Subscriptions: {JSON.stringify(data!.activePlans || [])}
+      Stripe Customer ID: {data && data!.stripeCustomerId} <br />
+      Subscriptions: {JSON.stringify(data && data!.activePlans || [])}
     </pre>
   );
 
@@ -44,7 +45,7 @@ function SubscribeToPlan() {
   const user = useUser();
 
   const [ plan, setPlan ] = useState<string | null>(null);
-  const [ subscriptions, setSubscriptions ] = useState([]);
+  const [ subscriptions, setSubscriptions ] = useState< any[]>([]);
   const [ loading, setLoading ] = useState(false);
 
   useEffect(() => {
@@ -67,7 +68,7 @@ function SubscribeToPlan() {
     setLoading(false);
   };
   
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     setLoading(true);
     event.preventDefault();
 
@@ -192,6 +193,7 @@ export const Subscriptions = (): JSX.Element => {
     return( 
         <div>
           <h1>Subscriptions</h1>
+          <SubscribeToPlan />
         </div>
       )
 };
