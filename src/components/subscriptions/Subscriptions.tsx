@@ -7,8 +7,7 @@ import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { ObservableStatus } from 'reactfire';
 import { User } from 'firebase/auth';
-import { PaymentMethodResult } from '@stripe/stripe-js';
-
+import { PaymentMethodResult, Stripe } from '@stripe/stripe-js';
 
 
 
@@ -17,7 +16,7 @@ interface UserDataProps {
   user: User
 };
 
-function UserData(props: UserDataProps): JSX.Element {
+function UserData(props: any): JSX.Element {
   const [data, setData ] = useState<DocumentData | null>();
 
   useEffect(
@@ -39,7 +38,7 @@ function UserData(props: UserDataProps): JSX.Element {
 
 
 
-function SubscribeToPlan(props) {
+function SubscribeToPlan() {
   const stripe = useStripe();
   const elements = useElements();
   const user = useUser();
@@ -62,7 +61,7 @@ function SubscribeToPlan(props) {
 
   const cancel = async (id: string): Promise<void> => {
     setLoading(true);
-    await fetchFromAPI('sunscriptions/' + id, { method: 'PATCH' });
+    await fetchFromAPI('subscriptions/' + id, { method: 'PATCH' });
     alert('canceled');
     await getSubscriptions();
     setLoading(false);
@@ -72,12 +71,14 @@ function SubscribeToPlan(props) {
     setLoading(true);
     event.preventDefault();
 
-    const cardElement = elements?.getElement(CardElement);
+    const cardElement = elements?.getElement(CardElement)!;
 
-    const { paymentMethod, error } = await stripe?.createPaymentMethod({
+
+    const { paymentMethod, error } = await stripe!.createPaymentMethod({
       type: 'card',
       card: cardElement,
     });
+  
 
     if (error) {
       alert(error.message);
@@ -88,7 +89,7 @@ function SubscribeToPlan(props) {
     const subscription = await fetchFromAPI('subscriptions', {
       body: {
         plan, 
-        payment_method: paymentMethod.id,
+        payment_method: paymentMethod!.id,
       },
     });
 
@@ -98,10 +99,10 @@ function SubscribeToPlan(props) {
       const { client_secret, status } = latest_invoice.payment_intent;
 
       if(status === 'requires_action') {
-        const { error: confirmationError } = await stripe?.confirmCardPayment(
+        const { error: confirmationError } = await stripe!.confirmCardPayment(
           client_secret
         );
-        
+
         if (confirmationError) {
           console.error(confirmationError);
           alert('unable to confirm card');
@@ -118,12 +119,17 @@ function SubscribeToPlan(props) {
   };
 
 
+  const userData = () => {
+    if (typeof user !== null){
+      return <UserData user={user} />
+    }
+  }
 
   return (
     <>
       <AuthCheck fallback={<SignIn />}>
         <div>
-          {user?.uid && <UserData user={user} />}
+          {user && userData()}
         </div>
 
         <hr />
