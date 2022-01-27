@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { useUser, AuthCheck, ObservableStatus } from 'reactfire';
+import { useUser, AuthCheck} from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
 import { Stripe, SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
-import { User} from 'firebase/auth';
+
 
 
 export function SignIn() {

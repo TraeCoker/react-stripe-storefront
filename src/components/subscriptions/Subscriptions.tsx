@@ -1,13 +1,12 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import {  CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser, AuthCheck } from 'reactfire';
 import { db } from '../helpers/firebase';
 import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
-import { ObservableStatus } from 'reactfire';
 import { User } from 'firebase/auth';
-import { PaymentMethodResult, Stripe } from '@stripe/stripe-js';
+
 
 
 
