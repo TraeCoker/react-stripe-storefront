@@ -7,7 +7,8 @@ import { Courses } from './components/courses/Courses';
 import { Subscriptions } from './components/subscriptions/Subscriptions';
 import { Dashboard } from './components/user/Dashboard';
 import { Navbar } from './components/navigation/Navbar';
-import './App.css';
+import './css/style.css'
+//import './App.css';
 
 
 
