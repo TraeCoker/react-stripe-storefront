@@ -18,6 +18,10 @@ body {
         font-weight: 400;
         letter-spacing: 3.5rem;
 
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
         
     }
 
@@ -27,6 +31,9 @@ body {
         font-weight: 700;
         letter-spacing: 1.75rem;
 
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
 
     }
 }

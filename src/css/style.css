@@ -57,12 +57,18 @@ body {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem; }
+    letter-spacing: 3.5rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
   .heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1.75rem; }
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
