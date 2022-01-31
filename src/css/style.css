@@ -87,6 +87,10 @@ body {
 .btn--white::after {
   background-color: #fff; }
 
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
 .header {
   height: 85vh;
   background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(126, 107, 143, 0.8)), url(/public/img/class-1-med.jpg);
