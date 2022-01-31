@@ -85,7 +85,7 @@
     }
 
     &:active {
-        box-shadow: 0 1rem 2rem rgba(rgba($color-black, .15));
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(0);
     }
 }
