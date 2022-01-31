@@ -1,0 +1,22 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        //larger than background to completely cover
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-blackm .1);
+        //center lines
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
