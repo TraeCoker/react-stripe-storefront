@@ -20,3 +20,17 @@
     }
 }
 
+&__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    //to fix in corner as you scroll
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+}
+
