@@ -6,7 +6,7 @@ import { Home } from './components/home/Home';
 import { Courses } from './components/courses/Courses';
 import { Subscriptions } from './components/subscriptions/Subscriptions';
 import { Dashboard } from './components/user/Dashboard';
-import { Navbar } from './components/navigation/Navbar';
+import { Navigation } from './components/navigation/Navigation';
 import './css/style.css'
 //import './App.css';
 
@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
   return (
     <AuthProvider sdk={auth}>
     <div className="App">
-      <Navbar />
+      <Navigation />
 
       <Routes>
         <Route path="/" element={ <Home /> } /> 
