@@ -13,24 +13,46 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-blackm .1);
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
         //center lines
         text-align: center;
         cursor: pointer;
     }
+
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        //to fix in corner as you scroll
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
 }
-
-&__background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    //to fix in corner as you scroll
-    position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-    background-image: radial-gradient($color-primary-light, $color-primary-dark);
-    z-index: 1000;
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-}
-
