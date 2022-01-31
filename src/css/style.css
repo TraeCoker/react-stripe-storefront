@@ -11,3 +11,11 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem; }
+
+.header {
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba(86, 11, 173, 0.8), rgba(58, 12, 163, 0.8)), url(/public/img/yoga-4-med.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 95vh; }
