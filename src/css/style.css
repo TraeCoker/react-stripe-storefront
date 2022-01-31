@@ -34,9 +34,20 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem; }
 
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(72, 149, 239, 0.8), rgba(58, 12, 163, 0.8)), url(/public/img/yoga-4-med.jpg);
+  background-image: url(/public/img/top-1-med.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
