@@ -1,2 +1,13 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
 body {
-  background-color: aqua; }
+  box-sizing: border-box;
+  padding: 3rem; }
