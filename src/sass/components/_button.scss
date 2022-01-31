@@ -1,4 +1,4 @@
-.btn {
+ .btn {
 
     &,
     &:link,
@@ -6,6 +6,7 @@
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
+        display: inline-block;
         border-radius: 10rem;
         transition: all 0.2s;
         position: relative;
@@ -64,7 +65,7 @@
     }
 }
 
-.btn-text {
+ .btn-text {
     &:link,
     &:visited {
         font-size: $default-font-size;
@@ -88,3 +89,6 @@
         transform: translateY(0);
     }
 }
+
+
+ 
