@@ -45,9 +45,22 @@ body {
   border: none;
   cursor: pointer; }
 
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
 .header {
   height: 85vh;
-  background-image: url(/public/img/top-1-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(126, 107, 143, 0.8)), url(/public/img/class-1-med.jpg);
   background-size: cover;
   background-position: top;
   position: relative;

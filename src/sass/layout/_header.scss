@@ -1,8 +1,12 @@
 .header {
     height: 85vh;
-    background-image: 
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+    ),
         
-    url(/public/img/top-1-med.jpg);
+    url(/public/img/class-1-med.jpg);
     background-size: cover;
     background-position: top;
     position: relative;

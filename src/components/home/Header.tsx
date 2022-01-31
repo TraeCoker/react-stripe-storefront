@@ -14,7 +14,7 @@ const Header: React.FC = () => {
                 <span className="heading-primary--main">THE SOURCE</span>
             </h1>
 
-            <a href="#" className="btn btn--white btn--animated">Find what calls you</a>
+            <a href="#" className="btn btn--white btn--animated">Find your calling</a>
         </div>
     </header>
   )
