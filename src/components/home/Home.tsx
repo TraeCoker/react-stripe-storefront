@@ -1,8 +1,9 @@
 import About from "./About";
-import Courses from "./Courses";
-import Features from "./Features";
+import CoursesContainer from "./CoursesContainer";
+import FeaturesContainer from "./FeaturesContainer";
 import Header from "./Header";
-import Reviews from "./Reviews";
+import ReviewsContainer from "./ReviewsContainer";
+
 
 export const Home: React.FC = () => {
     return (
@@ -10,9 +11,9 @@ export const Home: React.FC = () => {
             <Header />
             <main>
                 <About/>
-                <Features />
-                <Courses />
-                <Reviews />
+                <FeaturesContainer />
+                <CoursesContainer />
+                <ReviewsContainer />
             </main>
         </>
     )

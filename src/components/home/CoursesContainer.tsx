@@ -2,7 +2,7 @@ import React from 'react'
 import { courses } from '../helpers/models'
 import CourseCard from './CourseCard'
 
-const Courses: React.FC = () => {
+const CoursesContainer: React.FC = () => {
   return (
     <section className="section-courses" id="section-courses">
         <div className="u-center-text u-margin-bottom-big">
@@ -24,4 +24,4 @@ const Courses: React.FC = () => {
   )
 }
 
-export default Courses
+export default CoursesContainer

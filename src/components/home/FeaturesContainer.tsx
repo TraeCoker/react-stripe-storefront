@@ -3,7 +3,7 @@ import FeatureBox from './FeatureBox'
 import { features } from '../helpers/models'
 
 
-const Features: React.FC = () => {
+const FeaturesContainer: React.FC = () => {
 
   return (
       <section className="section-features">
@@ -12,6 +12,7 @@ const Features: React.FC = () => {
         </div>
       </section>
   )
+  
 }
 
-export default Features
+export default FeaturesContainer
