@@ -1,5 +1,6 @@
 import React from 'react'
-import Card from './Card'
+import { courses } from '../helpers/models'
+import CourseCard from './CourseCard'
 
 const Courses: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Courses: React.FC = () => {
         </div>
 
         <div className="row">
-            
+            {courses.map(course => <CourseCard {...course} />)}
         </div>
     </section>
       

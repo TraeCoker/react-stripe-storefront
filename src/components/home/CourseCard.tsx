@@ -1,7 +1,8 @@
 import React from 'react'
 import { Product } from '../helpers/models'
 
-const Card: React.FC<Product> = (product) => {
+const CourseCard: React.FC<Product> = (product) => {
+    const amount = product.amount.toString()
   return (
     <div className="col-1-of-3">
         <div className="card">
@@ -14,7 +15,7 @@ const Card: React.FC<Product> = (product) => {
                 </h4>
                 <div className="card__details">
                     <ul>
-                        {product.details.map(detail => <li>detail</li>)}
+                        {product.details.map(detail => <li>{detail}</li>)}
                     </ul>
                 </div>
             </div>
@@ -22,7 +23,7 @@ const Card: React.FC<Product> = (product) => {
                 <div className="card__cta">
                     <div className="card__price-box">
                         <p className="card__price-only">Only</p>
-                        <p className="card__price-value">${product.amount}</p>
+                        <p className="card__price-value">${amount.substring(0, amount.length - 2)}</p>
                     </div>
                     <a href="#" className="btn btn--white">Buy now!</a>
                 </div>
@@ -32,4 +33,4 @@ const Card: React.FC<Product> = (product) => {
   )
 }
 
-export default Card
+export default CourseCard
