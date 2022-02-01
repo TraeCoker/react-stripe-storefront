@@ -32,10 +32,16 @@ export interface ReviewObject {
 export const reviews: ReviewObject[] = [
     {
         name: "Sheila Quinn",
-        imageURL: "img/reviews-1.jpg",
+        imageURL: "img/review-1-med.jpg",
         heading: "My life just keeps getting better",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore, ad iusto natus nesciunt atque aliquid maiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore."
-    }
+    },
+    {
+        name: "Robert Paulson",
+        imageURL: "img/review-2-med.jpg",
+        heading: "I'm healthier than I've ever been",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore, ad iusto natus nesciunt atque aliquid maiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore."
+    },
 ]
 
 export const features: Feature[] = [
