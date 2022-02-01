@@ -32,3 +32,25 @@
     padding: 15rem 0;
     position: relative;
 }
+
+.section-contact {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.contact {
+    background-image: linear-gradient(105deg,
+                                      rgba($color-white, .9) 0%,
+                                      rgba($color-white, .9) 50%,
+                                      transparent 50%),
+                                url(/public/img/yoga-2-med.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+    }
+}
