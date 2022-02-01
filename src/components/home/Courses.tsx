@@ -4,7 +4,7 @@ import CourseCard from './CourseCard'
 
 const Courses: React.FC = () => {
   return (
-    <section className="sections-courses" id="section-tours">
+    <section className="section-courses" id="section-courses">
         <div className="u-center-text u-margin-bottom-big">
           <h2 className="heading-secondary">
               Most popular courses
