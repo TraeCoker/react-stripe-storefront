@@ -42,8 +42,8 @@
         z-index: 1500;
 
         opacity: 0;
-        width: 0;
-        height: 0;
+        width: 500%;
+        //height: 300%;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
