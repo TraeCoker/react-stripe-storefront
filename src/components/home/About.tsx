@@ -1,6 +1,7 @@
 import React from 'react'
+import Composition from './Composition'
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <section className="section-about">
         <div className="u-center-text u-margin-bottom-big">
@@ -24,7 +25,7 @@ const About = () => {
                 <a href="#" className="btn-text">Learn more &rarr;</a>
                 </div>
             <div className="col-1-of-2">
-                COMPOSITION
+                <Composition />
             </div>
         </div>
     </section>
