@@ -5,6 +5,7 @@ export interface Feature {
     text: string;
 }
 export interface Product {
+    id: number;
     name: string;
     description: string;
     details: string[];
@@ -45,8 +46,9 @@ export const features: Feature[] = [
     },
 ]
 
-export const courses = [
+export const courses: Product[] = [
     {
+        id: 1,
         name: "THRIVE Nutrition",
         description: "Fuel your body with this 12 week nutrition course",
         details: [
