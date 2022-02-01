@@ -21,7 +21,7 @@ const About = () => {
 
                 </p>
 
-                <a href="#" className="btn-text">Learn more &arr;</a>
+                <a href="#" className="btn-text">Learn more &rarr;</a>
                 </div>
             <div className="col-1-of-2">
                 COMPOSITION
