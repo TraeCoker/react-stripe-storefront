@@ -226,7 +226,7 @@ body {
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
 
-.navigation__:checked ~ .navigation__nav {
+.navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
 
@@ -261,6 +261,6 @@ body {
   top: 0;
   transform: rotate(135deg); }
 
-.navigation__checkbox:checked + .navigation__button .navigation_icon::after {
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }

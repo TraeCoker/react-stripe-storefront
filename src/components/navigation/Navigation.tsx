@@ -13,10 +13,10 @@ export const Navigation = (): JSX.Element => {
 
           <nav className="navigation__nav">
               <ul className="navigation__list">
-                  <li className="navigation__item" ><Link to="/" className="navigation__link">Home</Link></li>
-                  <li className="navigation__item"><Link to="/courses" className="navigation__link">Courses</Link></li>
-                  <li className="navigation__item"><Link to="/subscriptions" className="navigation__link">Subscriptions</Link></li>
-                  <li className="navigation__item"><Link to="/dashboard" className="navigation__link">Dashboard</Link></li>
+                  <li className="navigation__item" ><Link to="/" className="navigation__link"><span>01</span>Home</Link></li>
+                  <li className="navigation__item"><Link to="/courses" className="navigation__link"><span>02</span>Courses</Link></li>
+                  <li className="navigation__item"><Link to="/subscriptions" className="navigation__link"><span>03</span>Subscriptions</Link></li>
+                  <li className="navigation__item"><Link to="/dashboard" className="navigation__link"><span>04</span>Dashboard</Link></li>
               </ul>
           </nav>
       </div>
