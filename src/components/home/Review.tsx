@@ -1,7 +1,7 @@
 import React from 'react'
-import { Review, Review } from '../helpers/models'
+import { ReviewObject } from '../helpers/models'
 
-const Review: React.FC<Review> = ({name, imageURL, heading, text}) => {
+const Review: React.FC<ReviewObject> = ({name, imageURL, heading, text}) => {
   return (
     <div className="story">
         <figure className="story__shape">

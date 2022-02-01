@@ -1,4 +1,6 @@
 import React from 'react'
+import { reviews } from '../helpers/models'
+import Review from './Review'
 
 const ReviewsContainer: React.FC = () => {
   return (
@@ -14,7 +16,7 @@ const ReviewsContainer: React.FC = () => {
         </div>
 
         <div className="row">
-            
+            {reviews.map(review => <Review {...review}/>)}
         </div>
     </section>
   )

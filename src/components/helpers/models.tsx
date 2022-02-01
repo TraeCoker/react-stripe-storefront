@@ -22,17 +22,17 @@ export interface Product {
 //     product: Product;
 // }
 
-export interface Review {
+export interface ReviewObject {
     name: string;
     imageURL: string;
     heading: string;
     text: string;
 }
 
-export const reviews: Review[] = [
+export const reviews: ReviewObject[] = [
     {
         name: "Sheila Quinn",
-        imageURL: "/public/img/reviews-1.jpg",
+        imageURL: "img/reviews-1.jpg",
         heading: "My life just keeps getting better",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore, ad iusto natus nesciunt atque aliquid maiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore."
     }
