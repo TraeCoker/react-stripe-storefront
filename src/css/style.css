@@ -157,6 +157,12 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+.btn--secondary {
+  background-color: #1F7A8C;
+  color: #fff; }
+  .btn--secondary::after {
+    background-color: #fff; }
+
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #1F7A8C;

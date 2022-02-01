@@ -14,6 +14,10 @@ const Courses: React.FC = () => {
         <div className="row">
             {courses.map(course => <CourseCard {...course} />)}
         </div>
+
+        <div className="u-center-text u-margin-top-xl">
+            <a href="#" className="btn btn--secondary">Subscribe and save on access to all courses</a>
+        </div>
     </section>
       
     
