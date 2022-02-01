@@ -330,7 +330,7 @@ body {
     border-radius: none; }
   .review__img {
     height: 100%;
-    transform: translateX(-4rem) scale(1.4);
+    transform: translateX(3rem) scale(2);
     backface-visibility: hidden;
     transition: all .5s; }
   .review__text {
@@ -351,8 +351,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .review:hover .review__img {
-    transform: translateX(-4rem) scale(1);
-    filter: blur(3px) brightness(80%); }
+    transform: translateX(2rem) scale(1.6); }
 
 .row {
   max-width: 114rem;
