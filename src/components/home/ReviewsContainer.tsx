@@ -17,9 +17,7 @@ const ReviewsContainer: React.FC = () => {
             </h2>
         </div>
 
-        <div className="row">
             {reviews.map(review => <Review {...review}/>)}
-        </div>
     </section>
   )
 }
