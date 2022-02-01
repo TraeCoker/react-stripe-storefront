@@ -12,7 +12,7 @@ export const features: Feature[] = [
     },
     {
         icon: 2,
-        heading: "Build empowering relationships",
+        heading: "Build community",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore, ad iusto natus nesciunt atque aliquid maiores.",
     },
     {

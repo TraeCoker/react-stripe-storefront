@@ -8,8 +8,8 @@ interface Props {
 
 const FeatureBox: React.FC<Props>= ({icon, heading, text}) => {
   return (
-    <div className="feature-box">
-        <div className="col-1-of-4">
+    <div className="col-1-of-4">
+        <div className="feature-box">
             <i className="feature-box__icon">
                 {icon === 1 && <MdSelfImprovement />}
                 {icon === 2 && <MdOutlineGroups/> }
