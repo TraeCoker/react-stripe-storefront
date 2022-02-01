@@ -75,9 +75,10 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #B1F8F2, #7E6B8F);
+  background-image: linear-gradient(to right, #B1F8F2, #0c4f5c);
   -webkit-background-clip: text;
   background-clip: text;
+  color: transparent;
   letter-spacing: 2px; }
 
 .heading-tertiary {
@@ -193,6 +194,10 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #d2b0f0, #7E6B8F); }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -206,9 +211,7 @@ body {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #B1F8F2, #7E6B8F);
-    -webkit-background-clip: text;
-    background-clip: text; }
+    color: #1F7A8C; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
@@ -240,7 +243,7 @@ body {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(126, 107, 143, 0.8)), url(/public/img/class-1-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(12, 79, 92, 0.8)), url(/public/img/class-1-med.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -278,7 +281,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#B1F8F2, #7E6B8F);
+  background-image: radial-gradient(#B1F8F2, #0c4f5c);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -375,7 +378,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(126, 107, 143, 0.8)), url(/public/img/nature-2-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(12, 79, 92, 0.8)), url(/public/img/nature-2-med.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
