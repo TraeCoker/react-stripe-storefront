@@ -1,12 +1,8 @@
 import React from 'react'
+import { Feature } from '../helpers/models';
 import { MdRamenDining, MdSelfImprovement, MdOutlineGroups, MdOutlineMood } from "react-icons/md";
-interface Props {
-    icon: number;
-    heading: string;
-    text: string;
-}
 
-const FeatureBox: React.FC<Props>= ({icon, heading, text}) => {
+const FeatureBox: React.FC<Feature>= ({icon, heading, text}) => {
   return (
     <div className="col-1-of-4">
         <div className="feature-box">

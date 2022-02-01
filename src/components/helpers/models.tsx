@@ -1,8 +1,26 @@
+
 export interface Feature {
     icon: number;
     heading: string;
     text: string;
 }
+export interface Product {
+    name: string;
+    description: string;
+    details: string[];
+    images: string[];
+    amount: number;
+    currency: string;
+    quantity: number;
+}
+
+// export interface CardDetails {
+//     id: number;
+//     details: string[];
+//     price: string;
+//     product: Product;
+// }
+
 
 export const features: Feature[] = [
     {
@@ -26,3 +44,22 @@ export const features: Feature[] = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, id cumque. Accusamus tempore, ad iusto natus nesciunt atque aliquid maiores.",
     },
 ]
+
+export const courses = [
+    {
+        name: "THRIVE Nutrition",
+        description: "Fuel your body with this 12 week nutrition course",
+        details: [
+             "12 week course",
+            "Personalized meal plans",
+            "1 on 1 nutrition coaching",
+            "Find the right foods for your body",
+            "Complimentary microbiome test"
+        ],
+        images: [ '/public/img/food-3-med.jpg' ],
+        amount: 15000,
+        currency: 'usd',
+        quantity: 1
+    }
+]
+
