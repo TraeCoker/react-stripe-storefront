@@ -16,6 +16,7 @@
         width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
@@ -114,7 +115,7 @@
     }
 
     &__details {
-        padding: 3rem;
+        padding: 2rem;
 
         ul {
             list-style: none;
@@ -131,5 +132,31 @@
                 }
             }
         }
+    }
+
+    //BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
