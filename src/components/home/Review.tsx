@@ -3,12 +3,12 @@ import { ReviewObject } from '../helpers/models'
 
 const Review: React.FC<ReviewObject> = ({name, imageURL, heading, text}) => {
   return (
-    <div className="story">
-        <figure className="story__shape">
-            <img src={imageURL} alt="picture of a smiling reviewer" className="story__img" />
-            <figcaption className='story__caption'>{name}</figcaption>
+    <div className="review">
+        <figure className="review__shape">
+            <img src={imageURL} alt="picture of a smiling reviewer" className="review__img" />
+            <figcaption className='review__caption'>{name}</figcaption>
         </figure>
-        <div className="story__text">
+        <div className="review__text">
             <h3 className="heading-tertiary u-margin-bottom-small">{heading}</h3>
             <p>
                 {text}
