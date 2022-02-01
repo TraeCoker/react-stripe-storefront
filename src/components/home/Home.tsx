@@ -2,6 +2,7 @@ import About from "./About";
 import Courses from "./Courses";
 import Features from "./Features";
 import Header from "./Header";
+import Reviews from "./Reviews";
 
 export const Home: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ export const Home: React.FC = () => {
                 <About/>
                 <Features />
                 <Courses />
+                <Reviews />
             </main>
         </>
     )
