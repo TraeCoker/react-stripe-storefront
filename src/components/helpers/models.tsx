@@ -62,6 +62,38 @@ export const courses: Product[] = [
         amount: 15000,
         currency: 'usd',
         quantity: 1
+    },
+    {
+        id: 2,
+        name: "Mindful Mastery",
+        description: "Master your inner world and gain self knowledge",
+        details: [
+             "3 Month course",
+            "Daily practice videos",
+            "Taught by world-renowned instructors",
+            "Weekly Q and A",
+            "Group practice session"
+        ],
+        images: [ '/public/img/food-3-med.jpg' ],
+        amount: 15000,
+        currency: 'usd',
+        quantity: 1
+    },
+    {
+        id: 3,
+        name: "Functional Strength",
+        description: "Let movement be your medicine. Regain ranges of motion and gain strength.",
+        details: [
+             "12 week course",
+            "1 on 1 coaching",
+            "Tailored to your embodiement goals",
+            "Follow along classes",
+            "Myofascial release bonus course"
+        ],
+        images: [ '/public/img/food-3-med.jpg' ],
+        amount: 15000,
+        currency: 'usd',
+        quantity: 1
     }
 ]
 
