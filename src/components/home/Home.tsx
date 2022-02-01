@@ -1,4 +1,5 @@
 import About from "./About";
+import ContactContainer from "./ContactContainer";
 import CoursesContainer from "./CoursesContainer";
 import FeaturesContainer from "./FeaturesContainer";
 import Header from "./Header";
@@ -14,6 +15,7 @@ export const Home: React.FC = () => {
                 <FeaturesContainer />
                 <CoursesContainer />
                 <ReviewsContainer />
+                <ContactContainer />
             </main>
         </>
     )
