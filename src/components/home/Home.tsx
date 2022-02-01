@@ -1,5 +1,5 @@
 import About from "./About";
-import ContactContainer from "./ContactContainer";
+import ContactForm from "./ContactForm";
 import CoursesContainer from "./CoursesContainer";
 import FeaturesContainer from "./FeaturesContainer";
 import Header from "./Header";
@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
                 <FeaturesContainer />
                 <CoursesContainer />
                 <ReviewsContainer />
-                <ContactContainer />
+                <ContactForm />
             </main>
         </>
     )
