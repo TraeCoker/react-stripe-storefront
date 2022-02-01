@@ -1,7 +1,7 @@
 import React from 'react'
-
+import { MdRamenDining, MdSelfImprovement, MdOutlineGroups, MdOutlineMood } from "react-icons/md";
 interface Props {
-    icon: string;
+    icon: number;
     heading: string;
     text: string;
 }
@@ -9,7 +9,18 @@ interface Props {
 const FeatureBox: React.FC<Props>= ({icon, heading, text}) => {
   return (
     <div className="feature-box">
-      
+        <div className="col-1-of-4">
+            <i className="feature-box__icon">
+                {icon === 1 && <MdSelfImprovement />}
+                {icon === 2 && <MdOutlineGroups/> }
+                {icon === 3 && <MdRamenDining />}
+                {icon === 4 && <MdOutlineMood />}
+            </i>
+            <h3 className="heading-tertiary u-margin-bottom-small">{heading}</h3>
+            <p className="feature-box__text">
+                {text}
+            </p>
+        </div>
     </div>
   )
 }
