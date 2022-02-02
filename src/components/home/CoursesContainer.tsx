@@ -3,6 +3,7 @@ import { courses } from '../helpers/models'
 import CourseCard from './CourseCard'
 
 const CoursesContainer: React.FC = () => {
+  
   return (
     <section className="section-courses" >
         <div className="u-center-text u-margin-bottom-big" id="section-courses">
