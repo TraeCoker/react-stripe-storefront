@@ -95,7 +95,7 @@ export const courses: Product[] = [
             "Weekly Q and A",
             "Group practice session"
         ],
-        images: [ '/public/img/food-3-med.jpg' ],
+        images: [ '/public/img/yoga-4-med.jpg' ],
         amount: 15000,
         currency: 'usd',
         quantity: 1
