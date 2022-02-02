@@ -4,14 +4,14 @@ import CourseCard from './CourseCard'
 
 const CoursesContainer: React.FC = () => {
   return (
-    <section className="section-courses" id="section-courses">
-        <div className="u-center-text u-margin-bottom-big">
+    <section className="section-courses" >
+        <div className="u-center-text u-margin-bottom-big" id="section-courses">
           <h2 className="heading-secondary">
               Most popular courses
           </h2>
         </div>
 
-        <div className="row">
+        <div className="row" >
             {courses.map(course => <CourseCard {...course} />)}
         </div>
 
