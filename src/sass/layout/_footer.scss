@@ -10,7 +10,7 @@
     }
 
     &__logo {
-        width: 15rem;
+        width: 50rem;
         height: auto;
     }
 
@@ -20,5 +20,40 @@
         display: inline-block;
     }
 
-    
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-grey-light-1;
+            background-color: $color-grey-dark-3;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid $color-grey-dark-1;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
+    }
 }
