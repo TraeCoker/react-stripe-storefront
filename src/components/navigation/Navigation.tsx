@@ -1,7 +1,9 @@
-import { useRef, useState } from 'react';
+import {  useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
 
-export const Navigation = (): JSX.Element => {
+
+export const Navigation: React.FC = () => {
     const [checked, setChecked] = useState(false);
     
   return(
@@ -17,9 +19,9 @@ export const Navigation = (): JSX.Element => {
 
           <nav className="navigation__nav">
               <ul className="navigation__list">
-                  <li className="navigation__item" ><Link to="/" className="navigation__link" onClick={() => setChecked(!checked)}><span>01</span>Home</Link></li>
-                  <li className="navigation__item"><Link to="/courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</Link></li>
-                  <li className="navigation__item"><Link to="/subscriptions" className="navigation__link" onClick={() => setChecked(!checked)}><span>03</span>Subscriptions</Link></li>
+                  <li className="navigation__item" ><HashLink to="/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>01</span>Home</HashLink></li>
+                  <li className="navigation__item"><HashLink to="/#section-courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>
+                  <li className="navigation__item"><HashLink to="/subscriptions/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>03</span>Subscriptions</HashLink></li>
                   <li className="navigation__item"><Link to="/dashboard" className="navigation__link" onClick={() => setChecked(!checked)}><span>04</span>Dashboard</Link></li>
               </ul>
           </nav>

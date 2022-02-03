@@ -4,7 +4,7 @@ import { HeaderData } from '../helpers/models'
 const Header: React.FC<HeaderData> = ({mainHeading, subHeading, image, buttonText}) => {
 
   return (
-    <header className="header">
+    <header className="header" id="top">
         <div className="header__logo-box">
             <img src={image} alt="Logo" className="header__logo" />
         </div>
