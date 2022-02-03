@@ -3,29 +3,23 @@ import { fetchFromAPI } from '../helpers/helpers';
 import { useStripe } from '@stripe/react-stripe-js';
 import { Product } from '../helpers/models';
 
-interface CheckoutProduct {
-  name: string,
-  description: string,
-  images: string[],
-  amount: number,
-  currency: string,
-  quantity: number,
-}
-
+// interface CheckoutProduct {
+//   name: string,
+//   description: string,
+//   images: string[],
+//   amount: number,
+//   currency: string,
+//   quantity: number,
+// }
 
 interface Props {
   product: Product;
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-// interface Props {
-//   product: CheckoutProduct;
-// }
-
 export const Checkout: React.FC<Props>= ({product, setToggle}) => {
   const stripe = useStripe();
-  console.log(typeof product);
-  console.log(product.name)
+  const amount = product.amount.toString()
 
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     const body = { line_items: [product] }
@@ -45,20 +39,23 @@ export const Checkout: React.FC<Props>= ({product, setToggle}) => {
 
   return ( 
     <>
-      <div className='popup__text'>
-        <h3>{product.name}</h3>
-        <h4>{product.amount}</h4>
-        <p>{product.description}</p>
-
+      <div className="popup__left">
+        <img src={product.images[0]} alt="Course photo" className="popup__img" />
       </div>
-
-      <hr />
-
-      <button
+      <div className="popup__right">
+        <a href="#section-tours" className="popup__close" onClick={() => setToggle(false)}>&times;</a>
+        <h2 className="heading__secondary u-margin-bottom-small">{product.name}</h2>
+        <h3 className="heading__tertiary">${amount.substring(0, amount.length - 2)}</h3>
+        <p className="popup__text">{product.description}</p>
+        <button
         onClick={handleClick}
-        disabled={product.quantity < 1}>
+        className="btn btn--secondary">
         Start Checkout
-      </button>
+        </button>
+      </div>
+        
+  
+      
     </>
   )
 };
