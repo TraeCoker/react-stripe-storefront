@@ -8,6 +8,7 @@ import { DocumentData } from 'firebase/firestore';
 import { User } from 'firebase/auth';
 import Header from '../home/Header';
 import { HeaderData } from '../helpers/models';
+import Footer from '../home/Footer';
 
 interface UserDataProps {
   user: User
@@ -126,7 +127,50 @@ function SubscribeToPlan() {
   return (
     <>
       <AuthCheck fallback={<SignIn />}>
-        <div>
+      <section className="section-about">
+        <div className="u-center-text u-margin-bottom-big">
+            <h2 className="heading-secondary">
+                Membership plans to fit your lifestyle
+            </h2>
+        </div>
+
+        <div className="row">
+            <div className="col-1-of-2">
+                <h3 className="heading-tertiary u-margin-bottom-small">Monthly Membership</h3>
+                <p className="paragraph">
+                <ul>
+                  <li>$25 a month</li>
+                </ul>
+                </p>
+                <button className="btn btn--secondary"
+                  onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
+                  Choose Monthly $25/m
+                </button>
+                </div>
+            <div className="col-1-of-2">
+            <h3 className="heading-tertiary u-margin-bottom-small">Pro Membership</h3>
+            <p className="paragraph">
+                <ul>
+                  <li>$50 Quarterly</li>
+                </ul>
+                </p>
+                <button className="btn btn--secondary"
+                  onClick={() => setPlan('price_1KHf5OEFpPobBmTkLpTaKnk4')}>
+                  Choose Quarterly $50/q 
+                </button>
+            </div>
+        </div>
+        <form onSubmit={handleSubmit} hidden={!plan}>
+
+          <CardElement />
+          <button className="btn" 
+          type="submit" disabled={loading}>
+            Subscribe and Pay
+          </button>
+        </form>
+    </section>
+    </AuthCheck>
+        {/* <div>
           {user && userData()}
         </div>
 
@@ -178,7 +222,7 @@ function SubscribeToPlan() {
         <div>
           <SignOut user={user} />
         </div>
-      </AuthCheck>
+       */}
     </>
   );
 };
@@ -193,10 +237,12 @@ export const Subscriptions: React.FC = () => {
 }
 
     return( 
-        <div>
+        <>
            <Header {...headerData}/>
-          <h1>Subscriptions</h1>
-          <SubscribeToPlan />
-        </div>
+           <main>   
+              <SubscribeToPlan />
+           </main>
+           <Footer />
+        </>
       )
 };
