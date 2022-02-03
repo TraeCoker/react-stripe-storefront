@@ -12,11 +12,17 @@ interface CheckoutProduct {
   quantity: number,
 }
 
+
 interface Props {
-  product: CheckoutProduct;
+  product: Product;
+  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Checkout: React.FC<any>= ({product}) => {
+// interface Props {
+//   product: CheckoutProduct;
+// }
+
+export const Checkout: React.FC<Props>= ({product, setToggle}) => {
   const stripe = useStripe();
   console.log(typeof product);
   console.log(product.name)
@@ -39,13 +45,11 @@ export const Checkout: React.FC<any>= ({product}) => {
 
   return ( 
     <>
-
       <div className='popup__text'>
         <h3>{product.name}</h3>
         <h4>{product.amount}</h4>
         <p>{product.description}</p>
 
-        <img src={product.images[0]} width="250px" alt="product" />
       </div>
 
       <hr />

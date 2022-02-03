@@ -79,7 +79,7 @@ export const courses: Product[] = [
             "Find the right foods for your body",
             "Complimentary microbiome test"
         ],
-        images: [ '/public/img/food-3-med.jpg' ],
+        images: [ 'img/food-3-med.jpg' ],
         amount: 15000,
         currency: 'usd',
         quantity: 1
@@ -95,7 +95,7 @@ export const courses: Product[] = [
             "Weekly Q and A",
             "Group practice session"
         ],
-        images: [ '/public/img/yoga-4-med.jpg' ],
+        images: [ 'img/yoga-4-med.jpg' ],
         amount: 15000,
         currency: 'usd',
         quantity: 1
@@ -111,7 +111,7 @@ export const courses: Product[] = [
             "Follow along classes",
             "Myofascial release bonus course"
         ],
-        images: [ '/public/img/food-3-med.jpg' ],
+        images: [ 'img/food-3-med.jpg' ],
         amount: 15000,
         currency: 'usd',
         quantity: 1

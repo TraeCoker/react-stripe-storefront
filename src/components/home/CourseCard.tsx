@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Checkout } from '../checkout/Checkout';
 import { Product } from '../helpers/models'
 import Popup from './Popup';
 
@@ -12,8 +13,11 @@ const CourseCard: React.FC<Product> = (product) => {
 
   return (
       <>
-        {popupToggle && <Popup product={product} setToggle={setPopupToggle}/>}
-        
+        {popupToggle && <Popup>
+                            <Checkout product={product} setToggle={setPopupToggle}/>
+                        </Popup> 
+        }
+
         <div className="col-1-of-3">
             <div className="card">
                 <div className="card__side card__side--front">
