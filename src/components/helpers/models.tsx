@@ -4,11 +4,15 @@ export interface Feature {
     heading: string;
     text: string;
 }
-export interface Product {
+export interface Course {
     id: number;
+    details: string[];
+    product: Product;
+}
+
+export interface Product {
     name: string;
     description: string;
-    details: string[];
     images: string[];
     amount: number;
     currency: string;
@@ -67,11 +71,9 @@ export const features: Feature[] = [
     },
 ]
 
-export const courses: Product[] = [
+export const courses: Course[] = [
     {
         id: 1,
-        name: "THRIVE Nutrition",
-        description: "Fuel your body with this 12 week nutrition course",
         details: [
              "12 week course",
             "Personalized meal plans",
@@ -79,15 +81,17 @@ export const courses: Product[] = [
             "Find the right foods for your body",
             "Complimentary microbiome test"
         ],
-        images: [ 'img/food-3-med.jpg' ],
-        amount: 15000,
-        currency: 'usd',
-        quantity: 1
+        product: {
+            name: "THRIVE Nutrition",
+            description: "Fuel your body with this 12 week nutrition course",
+            images: [ 'img/food-3-med.jpg' ],
+            amount: 15000,
+            currency: 'usd',
+            quantity: 1
+        },
     },
     {
         id: 2,
-        name: "Mindful Mastery",
-        description: "Master your inner world and gain self knowledge",
         details: [
              "3 Month course",
             "Daily practice videos",
@@ -95,15 +99,17 @@ export const courses: Product[] = [
             "Weekly Q and A",
             "Group practice session"
         ],
-        images: [ 'img/yoga-4-med.jpg' ],
-        amount: 15000,
-        currency: 'usd',
-        quantity: 1
+        product: {
+            name: "Mindful Mastery",
+            description: "Master your inner world and gain self knowledge",
+            images: [ 'img/yoga-4-med.jpg' ],
+            amount: 15000,
+            currency: 'usd',
+            quantity: 1
+        },
     },
     {
         id: 3,
-        name: "Functional Strength",
-        description: "Let movement be your medicine. Regain ranges of motion and gain strength.",
         details: [
              "12 week course",
             "1 on 1 coaching",
@@ -111,10 +117,14 @@ export const courses: Product[] = [
             "Follow along classes",
             "Myofascial release bonus course"
         ],
-        images: [ 'img/food-3-med.jpg' ],
-        amount: 15000,
-        currency: 'usd',
-        quantity: 1
+        product: {
+            name: "Functional Strength",
+            description: "Let movement be your medicine. Regain ranges of motion and gain strength.",
+            images: [ 'img/food-3-med.jpg' ],
+            amount: 15000,
+            currency: 'usd',
+            quantity: 1
+        },
     }
 ]
 
