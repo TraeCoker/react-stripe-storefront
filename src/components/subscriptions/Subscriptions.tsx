@@ -166,7 +166,8 @@ function SubscribeToPlan() {
             
             </div>
         </div>
-        <div className="feature-box feature-box--sub">
+        <div className="row">
+          <div className="feature-box feature-box--pay">
           <p>
               Selected Plan: <strong>{plan}</strong>
           </p>
@@ -179,6 +180,7 @@ function SubscribeToPlan() {
             </button>
           </form>
         </div>
+      </div>
         
     </section>
     </AuthCheck>

@@ -403,6 +403,10 @@ body {
     transform: translateY(-1.5rem) scale(1.03); }
   .feature-box--sub {
     background-color: rgba(247, 247, 247, 0.8); }
+  .feature-box--pay {
+    background-color: rgba(247, 247, 247, 0.8); }
+    .feature-box--pay:hover {
+      transform: translateY(-0.5rem); }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }

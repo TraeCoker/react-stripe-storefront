@@ -25,4 +25,12 @@
         background-color: rgba($color-grey-light-1, .8);
     }
 
+    &--pay {
+        background-color: rgba($color-grey-light-1, .8);
+        
+        &:hover {
+            transform: translateY(-.5rem);
+        }
+    }
+
 }
