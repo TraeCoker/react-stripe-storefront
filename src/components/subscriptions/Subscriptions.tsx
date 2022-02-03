@@ -187,10 +187,9 @@ function SubscribeToPlan() {
 
 export const Subscriptions: React.FC = () => {
   const headerData: HeaderData = {
-    mainHeading: "THE SOURCE",
-    subHeading: "return to",
+    mainHeading: "commUNITY",
+    subHeading: "join our inclusive", 
     image: "img/logo-3.png",
-    buttonText: "Find your calling"
 }
 
     return( 

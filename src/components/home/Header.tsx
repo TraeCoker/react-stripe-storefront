@@ -15,7 +15,7 @@ const Header: React.FC<HeaderData> = ({mainHeading, subHeading, image, buttonTex
                 <span className="heading-primary--main">{mainHeading}</span>
             </h1>
 
-            <a href="#section-courses" className="btn btn--white btn--animated">{buttonText}</a>
+            {buttonText && <a href="#section-courses" className="btn btn--white btn--animated">{buttonText}</a>}
         </div>
     </header>
   )
