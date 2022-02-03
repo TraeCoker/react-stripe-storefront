@@ -38,7 +38,7 @@ const CourseCard: React.FC<Product> = (product) => {
                 </div>
             </div>
         </div>
-        {popupToggle && <Popup />}
+        {popupToggle && <Popup {...product} />}
       </>    
   )
 }
