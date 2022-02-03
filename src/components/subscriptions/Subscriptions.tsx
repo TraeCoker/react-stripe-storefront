@@ -127,7 +127,7 @@ function SubscribeToPlan() {
   return (
     <>
       <AuthCheck fallback={<SignIn />}>
-      <section className="section-about">
+      <section className="section-sub">
         <div className="u-center-text u-margin-bottom-big">
             <h2 className="heading-secondary">
                 Membership plans to fit your lifestyle
@@ -136,6 +136,7 @@ function SubscribeToPlan() {
 
         <div className="row">
             <div className="col-1-of-2">
+              <div className="feature-box feature-box--sub">
                 <h3 className="heading-tertiary u-margin-bottom-small">Monthly Membership</h3>
                 <p className="paragraph">
                 <ul>
@@ -146,10 +147,13 @@ function SubscribeToPlan() {
                   onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
                   Choose Monthly $25/m
                 </button>
+              </div>
+                
                 </div>
             <div className="col-1-of-2">
-            <h3 className="heading-tertiary u-margin-bottom-small">Pro Membership</h3>
-            <p className="paragraph">
+              <div className="feature-box feature-box--sub">
+              <h3 className="heading-tertiary u-margin-bottom-small">Pro Membership</h3>
+              <p className="paragraph">
                 <ul>
                   <li>$50 Quarterly</li>
                 </ul>
@@ -158,16 +162,24 @@ function SubscribeToPlan() {
                   onClick={() => setPlan('price_1KHf5OEFpPobBmTkLpTaKnk4')}>
                   Choose Quarterly $50/q 
                 </button>
+              </div>
+            
             </div>
         </div>
-        <form onSubmit={handleSubmit} hidden={!plan}>
+        <div className="feature-box feature-box--sub">
+          <p>
+              Selected Plan: <strong>{plan}</strong>
+          </p>
+          <form onSubmit={handleSubmit} hidden={!plan}>
 
-          <CardElement />
-          <button className="btn" 
-          type="submit" disabled={loading}>
-            Subscribe and Pay
-          </button>
-        </form>
+            <CardElement />
+            <button className="btn" 
+            type="submit" disabled={loading}>
+              Subscribe and Pay
+            </button>
+          </form>
+        </div>
+        
     </section>
     </AuthCheck>
         {/* <div>

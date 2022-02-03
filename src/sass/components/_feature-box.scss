@@ -20,4 +20,9 @@
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
     }
+
+    &--sub {
+        background-color: rgba($color-grey-light-1, .8);
+    }
+
 }
