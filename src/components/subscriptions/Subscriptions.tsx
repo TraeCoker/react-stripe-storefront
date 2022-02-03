@@ -168,9 +168,8 @@ function SubscribeToPlan() {
         </div>
         <div className="row">
           <div className="feature-box feature-box--pay">
-          <p>
-              Selected Plan: <strong>{plan}</strong>
-          </p>
+            <h3 className="heading-tertiary">Selected Plan: <strong>{plan}</strong></h3>
+          
           <form onSubmit={handleSubmit} hidden={!plan}>
 
             <CardElement />

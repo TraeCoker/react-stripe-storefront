@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink } from 'react-router-hash-link'
 import { courses } from '../helpers/models'
 import CourseCard from './CourseCard'
 
@@ -17,7 +18,7 @@ const CoursesContainer: React.FC = () => {
         </div>
 
         <div className="u-center-text u-margin-top-xl">
-            <a href="#" className="btn btn--secondary">Subscribe and save on access to all courses</a>
+            <HashLink to="/subscriptions/#top" className="btn btn--secondary">Subscribe and save on access to all courses</HashLink>
         </div>
     </section>
       
