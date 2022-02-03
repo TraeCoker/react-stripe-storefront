@@ -33,7 +33,7 @@ const CourseCard: React.FC<Product> = (product) => {
                             <p className="card__price-only">Only</p>
                             <p className="card__price-value">${amount.substring(0, amount.length - 2)}</p>
                         </div>
-                        <a href="#" className="btn btn--white" onClick={() => handleClick()}>Buy now!</a>
+                        <a href="#popup" className="btn btn--white" onClick={() => handleClick()}>Buy now!</a>
                     </div>
                 </div>
             </div>
