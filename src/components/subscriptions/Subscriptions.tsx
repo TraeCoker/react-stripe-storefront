@@ -6,18 +6,16 @@ import { db } from '../helpers/firebase';
 import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { User } from 'firebase/auth';
-
-
-
-
+import Header from '../home/Header';
+import { HeaderData } from '../helpers/models';
 
 interface UserDataProps {
   user: User
 };
 
+
 function UserData(props: any): JSX.Element {
   const [data, setData ] = useState<DocumentData | null | undefined>(null);
-  
 
   useEffect(
     () => {
@@ -187,10 +185,17 @@ function SubscribeToPlan() {
 
 
 
-export const Subscriptions = (): JSX.Element => {
+export const Subscriptions: React.FC = () => {
+  const headerData: HeaderData = {
+    mainHeading: "THE SOURCE",
+    subHeading: "return to",
+    image: "img/logo-3.png",
+    buttonText: "Find your calling"
+}
 
     return( 
         <div>
+           <Header {...headerData}/>
           <h1>Subscriptions</h1>
           <SubscribeToPlan />
         </div>

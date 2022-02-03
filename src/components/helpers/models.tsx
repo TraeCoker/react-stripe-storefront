@@ -128,3 +128,10 @@ export const courses: Course[] = [
     }
 ]
 
+export interface HeaderData {
+    mainHeading: string;
+    subHeading: string;
+    image: string;
+    buttonText?: string;
+}
+
