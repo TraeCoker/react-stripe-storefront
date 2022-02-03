@@ -75,7 +75,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #B1F8F2, #0c4f5c);
+  background-image: linear-gradient(to right, #75cf7f, #064635);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -172,22 +172,22 @@ body {
   animation-fill-mode: backwards; }
 
 .btn--secondary {
-  background-color: #1F7A8C;
+  background-color: #519259;
   color: #fff; }
   .btn--secondary::after {
     background-color: #fff; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #1F7A8C;
+  color: #519259;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #1F7A8C;
+  border-bottom: 1px solid #519259;
   padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
-  background-color: #1F7A8C;
+  background-color: #519259;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -218,11 +218,11 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #d2b0f0, #7E6B8F); }
+        background-image: linear-gradient(to right bottom, #f0bb62, #f0bb62); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #B1F8F2, #0c4f5c); }
+        background-image: linear-gradient(to right bottom, #75cf7f, #064635); }
       .card__side--back-3 {
-        background-image: linear-gradient(to right bottom, #d2b0f0, #7E6B8F); }
+        background-image: linear-gradient(to right bottom, #f0bb62, #f0bb62); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -236,11 +236,11 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #d2b0f0, #7E6B8F), url(/public/img/food-6-med.jpg); }
+      background-image: linear-gradient(to right bottom, #f0bb62, #f0bb62), url(/public/img/food-6-med.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #B1F8F2, #0c4f5c), url(/public/img/yoga-4-med.jpg); }
+      background-image: linear-gradient(to right bottom, #75cf7f, #064635), url(/public/img/yoga-4-med.jpg); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #d2b0f0, #7E6B8F), url(/public/img/class-16-med.jpg); }
+      background-image: linear-gradient(to right bottom, #f0bb62, #f0bb62), url(/public/img/class-16-med.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -256,11 +256,11 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(210, 176, 240, 0.85), rgba(126, 107, 143, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(240, 187, 98, 0.85), rgba(240, 187, 98, 0.85)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.85), rgba(12, 79, 92, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(117, 207, 127, 0.85), rgba(6, 70, 53, 0.85)); }
     .card__heading-span--3 {
-      background-image: linear-gradient(to right bottom, rgba(210, 176, 240, 0.85), rgba(126, 107, 143, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(240, 187, 98, 0.85), rgba(240, 187, 98, 0.85)); }
   .card__details {
     padding: 2rem; }
     .card__details ul {
@@ -311,7 +311,7 @@ body {
       left: 20%;
       top: 10rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #1F7A8C;
+      outline: 1.5rem solid #519259;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -330,7 +330,7 @@ body {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    color: #1F7A8C; }
+    color: #519259; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
@@ -352,9 +352,9 @@ body {
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #1F7A8C; }
+    border-bottom: 3px solid #519259; }
   .form__input:focus:invalid {
-    border-bottom: 3px solid #7E6B8F; }
+    border-bottom: 3px solid #f0bb62; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
 
@@ -449,7 +449,7 @@ textarea {
     display: inline-block;
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
-    color: #1F7A8C;
+    color: #519259;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .footer__copyright {
     border-top: 1px solid #777;
@@ -485,7 +485,7 @@ textarea {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(12, 79, 92, 0.8)), url(/public/img/class-1-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(117, 207, 127, 0.8), rgba(6, 70, 53, 0.8)), url(/public/img/header-1-med.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -527,7 +527,7 @@ textarea {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#B1F8F2, #0c4f5c);
+  background-image: radial-gradient(#75cf7f, #064635);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -571,7 +571,7 @@ textarea {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #1F7A8C;
+  color: #519259;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -624,7 +624,7 @@ textarea {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(177, 248, 242, 0.8), rgba(12, 79, 92, 0.8)), url(/public/img/nature-2-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(117, 207, 127, 0.8), rgba(6, 70, 53, 0.8)), url(/public/img/nature-2-med.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
@@ -642,7 +642,7 @@ textarea {
 
 .section-contact {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #B1F8F2, #0c4f5c); }
+  background-image: linear-gradient(to right bottom, #75cf7f, #064635); }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/public/img/yoga-2-med.jpg);
