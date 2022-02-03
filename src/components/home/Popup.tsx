@@ -1,4 +1,5 @@
 import React from 'react'
+import { Checkout } from '../checkout/Checkout'
 import { Product } from '../helpers/models'
 
 interface Props {
@@ -18,8 +19,7 @@ const Popup: React.FC<Props>= ({product, setToggle}) => {
             <div className="popup__right">
                 <a href="#section-courses" className="popup__close" 
                    onClick={() => setToggle(false)}>&times;</a>
-                <h1>{product.name}</h1>
-                <h3>{product.description}</h3>
+                {product && <Checkout product={product}/>}
             </div>
             
         </div>

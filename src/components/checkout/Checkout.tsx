@@ -3,31 +3,23 @@ import { fetchFromAPI } from '../helpers/helpers';
 import { useStripe } from '@stripe/react-stripe-js';
 import { Product } from '../helpers/models';
 
-// type Product = {
-//   name: string,
-//   description: string,
-//   images: string[],
-//   amount: number,
-//   currency: string,
-//   quantity: number,
-// }
+interface CheckoutProduct {
+  name: string,
+  description: string,
+  images: string[],
+  amount: number,
+  currency: string,
+  quantity: number,
+}
 
-export const Checkout: React.FC<Product> = (product) => {
+interface Props {
+  product: CheckoutProduct;
+}
+
+export const Checkout: React.FC<any>= ({product}) => {
   const stripe = useStripe();
-
-  // const [product, setProduct] = useState<Product>({
-  //     name: 'Apple',
-  //     description: 'A nice juicy delight',
-  //     images: [
-  //       'https://www.goodfruit.com/wp-content/uploads/Snapdragon-single.jpg'
-  //     ],
-  //     amount: 499,
-  //     currency: 'usd',
-  //     quantity: 0,  
-  // });
-
-  // const changeQuantity = (v: number): void => 
-  //   setProduct({...product, quantity: Math.max(0, product.quantity + v) });
+  console.log(typeof product);
+  console.log(product.name)
 
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     const body = { line_items: [product] }
@@ -48,7 +40,7 @@ export const Checkout: React.FC<Product> = (product) => {
   return ( 
     <>
 
-      <div>
+      <div className='popup__text'>
         <h3>{product.name}</h3>
         <h4>{product.amount}</h4>
         <p>{product.description}</p>
