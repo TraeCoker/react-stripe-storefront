@@ -12,6 +12,8 @@ const CourseCard: React.FC<Product> = (product) => {
 
   return (
       <>
+        {popupToggle && <Popup product={product} setToggle={setPopupToggle}/>}
+        
         <div className="col-1-of-3">
             <div className="card">
                 <div className="card__side card__side--front">
@@ -38,7 +40,7 @@ const CourseCard: React.FC<Product> = (product) => {
                 </div>
             </div>
         </div>
-        {popupToggle && <Popup product={product} setToggle={setPopupToggle}/>}
+        
       </>    
   )
 }
