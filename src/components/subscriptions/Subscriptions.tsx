@@ -42,6 +42,7 @@ function SubscribeToPlan() {
   const elements = useElements();
   const user = useUser();
 
+  
   const [ plan, setPlan ] = useState<string | null>(null);
   const [ subscriptions, setSubscriptions ] = useState< any[]>([]);
   const [ loading, setLoading ] = useState(false);
@@ -168,7 +169,12 @@ function SubscribeToPlan() {
         </div>
         <div className="row">
           <div className="feature-box feature-box--pay">
-            <h3 className="heading-tertiary">Selected Plan: <strong>{plan}</strong></h3>
+            <h3 className="heading-tertiary">Selected Plan: 
+              <strong>{
+                plan === 'price_1KHf5OEFpPobBmTk37NB2k5c' && ' $25 monthly Subscription' || 
+                plan === 'price_1KHf5OEFpPobBmTkLpTaKnk4' && ' $50 quarterly Subscription' }
+              </strong>
+            </h3>
           
           <form onSubmit={handleSubmit} hidden={!plan}>
 
