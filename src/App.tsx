@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Home } from './components/home/Home';
 import { Courses } from './components/courses/Courses';
 import { Subscriptions } from './components/subscriptions/Subscriptions';
-import { Dashboard } from './components/user/Dashboard';
+import { Dashboard } from './components/dashboard/Dashboard';
 import { Navigation } from './components/layout/Navigation';
 import './css/style.css'
 //import './App.css';

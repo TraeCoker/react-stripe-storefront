@@ -6,7 +6,7 @@ const Header: React.FC<HeaderData> = ({mainHeading, subHeading, page, buttonText
   return (
     <header className={`header header-${page}`} id="top">
         <div className="header__logo-box">
-              <img src="/img/logo-3.png" alt="Logo" className="header__logo" />
+              <img src="/img/logo-white-2-small.png" alt="Logo" className="header__logo" />
         </div>
 
         <div className="header__text-box">

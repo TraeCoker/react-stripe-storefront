@@ -3,7 +3,7 @@ import { fetchFromAPI } from '../helpers/helpers';
 import {  CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser, AuthCheck } from 'reactfire';
 import { db } from '../helpers/firebase';
-import { SignIn, SignOut } from '../user/Dashboard';
+import { SignIn, SignOut } from '../dashboard/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { User } from 'firebase/auth';
 import Header from '../layout/Header';
