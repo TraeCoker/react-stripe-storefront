@@ -2,14 +2,14 @@
     background-color: $color-primary;
     padding: 25rem 0;
     //calculated from missing triangle on header
-    margin-top: -20vh;
+    margin-top: -1vh;
 }
 
 .dashboard {
     background-color: $color-grey-light-2;
-    padding: 25rem 0;
+    padding: 14rem 0;
     //calculated from missing triangle on header
-    margin-top: -20vh;
+    margin-top: -25vh;
     width: 100%;
     transform: skewY(-7deg);
 
@@ -42,6 +42,24 @@
                     border-bottom: 1px solid $color-grey-dark-2;
                 }
             }
+        }
+    }
+
+    &__user {
+        margin-top: 4rem;
+        text-align: center;
+        &-heading {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+ 
+        }
+
+        &-img {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
         }
     }
 }

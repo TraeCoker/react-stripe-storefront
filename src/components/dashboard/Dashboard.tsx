@@ -36,8 +36,8 @@ export const Dashboard = (): JSX.Element => {
               </div>
               <div className="col-1-of-3">
                 <div className="dashboard__user">
-                  <h1 className="heading-tertiary">Welcome back {currentUser?.displayName}</h1>
-                  { currentUser && <img src={currentUser?.photoURL as string} alt="" />}
+                  <h3 className="heading-tertairy dashboard__user-heading u-margin-bottom-small">Welcome back {currentUser?.displayName}</h3>
+                  { currentUser && <img src={currentUser?.photoURL as string} alt="" className="dashboard__user-img"/>}
                 </div>
               
               </div>

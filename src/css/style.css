@@ -706,12 +706,12 @@ textarea {
 .section-dashboard {
   background-color: #80b192;
   padding: 25rem 0;
-  margin-top: -20vh; }
+  margin-top: -1vh; }
 
 .dashboard {
   background-color: #eee;
-  padding: 25rem 0;
-  margin-top: -20vh;
+  padding: 14rem 0;
+  margin-top: -25vh;
   width: 100%;
   transform: skewY(-7deg); }
   .dashboard > * {
@@ -733,6 +733,18 @@ textarea {
         padding: 1rem; }
         .dashboard__nav ul li:not(:last-child) {
           border-bottom: 1px solid #999; }
+  .dashboard__user {
+    margin-top: 4rem;
+    text-align: center; }
+    .dashboard__user-heading {
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase; }
+    .dashboard__user-img {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%); }
 
 .section-about {
   background-color: #f7f7f7;
