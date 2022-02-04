@@ -6,7 +6,7 @@ import { Home } from './components/home/Home';
 import { Courses } from './components/courses/Courses';
 import { Subscriptions } from './components/subscriptions/Subscriptions';
 import { Dashboard } from './components/user/Dashboard';
-import { Navigation } from './components/navigation/Navigation';
+import { Navigation } from './components/layout/Navigation';
 import './css/style.css'
 //import './App.css';
 

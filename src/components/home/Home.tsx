@@ -3,8 +3,8 @@ import About from "./About";
 import ContactForm from "./ContactForm";
 import CoursesContainer from "./CoursesContainer";
 import FeaturesContainer from "./FeaturesContainer";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 import ReviewsContainer from "./ReviewsContainer";
 
 
@@ -12,7 +12,7 @@ export const Home: React.FC = () => {
     const headerData: HeaderData = {
         mainHeading: "THE SOURCE",
         subHeading: "return to",
-        image: "img/logo-3.png",
+        page: "home",
         buttonText: "Find your calling"
     }
     return (

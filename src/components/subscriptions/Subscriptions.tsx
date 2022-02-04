@@ -6,9 +6,9 @@ import { db } from '../helpers/firebase';
 import { SignIn, SignOut } from '../user/Dashboard';
 import { DocumentData } from 'firebase/firestore';
 import { User } from 'firebase/auth';
-import Header from '../home/Header';
+import Header from '../layout/Header';
 import { HeaderData } from '../helpers/models';
-import Footer from '../home/Footer';
+import Footer from '../layout/Footer';
 
 interface UserDataProps {
   user: User
@@ -251,8 +251,8 @@ function SubscribeToPlan() {
 export const Subscriptions: React.FC = () => {
   const headerData: HeaderData = {
     mainHeading: "commUNITY",
-    subHeading: "join our inclusive", 
-    image: "img/logo-3.png",
+    subHeading: "join our thriving", 
+    page: "sub",
 }
 
     return( 
