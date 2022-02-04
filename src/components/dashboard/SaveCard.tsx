@@ -77,7 +77,7 @@ export const SaveCard: React.FC = () => {
             </div>
             <hr/>
   
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}  hidden={setupIntent? false : true}>
   
                 <CardElement />
                 <button className="btn btn--secondary"
@@ -94,9 +94,6 @@ export const SaveCard: React.FC = () => {
                 ))}
               </select>
             </div>
-              <div>
-                <SignOut user={user} />
-              </div>
         </div>
         
   
