@@ -75,7 +75,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #5390d9, #6930c3);
+  background-image: linear-gradient(to right, #80b192, #4b4e6d);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -173,22 +173,22 @@ body {
   animation-fill-mode: backwards; }
 
 .btn--secondary {
-  background-color: #5e60ce;
+  background-color: #80b192;
   color: #fff; }
   .btn--secondary::after {
     background-color: #fff; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #5e60ce;
+  color: #80b192;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #5e60ce;
+  border-bottom: 1px solid #80b192;
   padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
-  background-color: #5e60ce;
+  background-color: #80b192;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -226,7 +226,7 @@ body {
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ff9e74, #a34e2a); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #5390d9, #6930c3); }
+        background-image: linear-gradient(to right bottom, #80b192, #4b4e6d); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #43aa8b, #455550); }
   .card:hover .card__side--front {
@@ -244,7 +244,7 @@ body {
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ff9e74, #a34e2a), url(/public/img/food-6-med.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #5390d9, #6930c3), url(/public/img/yoga-4-med.jpg); }
+      background-image: linear-gradient(to right bottom, #80b192, #4b4e6d), url(/public/img/yoga-4-med.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #43aa8b, #455550), url(/public/img/class-16-med.jpg); }
   .card__heading {
@@ -264,7 +264,7 @@ body {
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 158, 116, 0.85), rgba(163, 78, 42, 0.85)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(83, 144, 217, 0.85), rgba(105, 48, 195, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(128, 177, 146, 0.85), rgba(75, 78, 109, 0.85)); }
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(67, 170, 139, 0.85), rgba(69, 85, 80, 0.85)); }
   .card__details {
@@ -317,7 +317,7 @@ body {
       left: 20%;
       top: 10rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #5e60ce;
+      outline: 1.5rem solid #80b192;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -390,7 +390,7 @@ body {
     transition: all .2s;
     line-height: 1; }
   .popup__close:hover {
-    color: #5e60ce; }
+    color: #80b192; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -404,7 +404,7 @@ body {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    color: #5e60ce; }
+    color: #80b192; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
   .feature-box--sub {
@@ -432,7 +432,7 @@ body {
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #5e60ce; }
+    border-bottom: 3px solid #80b192; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #a34e2a; }
   .form__input::-webkit-input-placeholder {
@@ -529,7 +529,7 @@ textarea {
     display: inline-block;
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
-    color: #5e60ce;
+    color: #80b192;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .footer__copyright {
     border-top: 1px solid #777;
@@ -568,12 +568,12 @@ textarea {
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   height: 95vh; }
   .header-home {
-    background-image: linear-gradient(to right bottom, rgba(83, 144, 217, 0.8), rgba(105, 48, 195, 0.8)), url(/public/img/class-1-med.jpg);
+    background-image: linear-gradient(to right bottom, rgba(128, 177, 146, 0.8), rgba(75, 78, 109, 0.8)), url(/public/img/class-1-med.jpg);
     background-size: cover;
     background-position: top;
     position: relative; }
   .header-sub {
-    background-image: linear-gradient(to right bottom, rgba(83, 144, 217, 0.8), rgba(105, 48, 195, 0.8)), url(/public/img/people-1-med.jpg);
+    background-image: linear-gradient(to right bottom, rgba(128, 177, 146, 0.8), rgba(75, 78, 109, 0.8)), url(/public/img/people-1-med.jpg);
     background-size: cover;
     background-position: top;
     position: relative; }
@@ -613,7 +613,7 @@ textarea {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#5390d9, #6930c3);
+  background-image: radial-gradient(#80b192, #4b4e6d);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -657,7 +657,7 @@ textarea {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #5e60ce;
+  color: #80b192;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -704,7 +704,7 @@ textarea {
   transform: rotate(-135deg); }
 
 .section-dashboard {
-  background-color: #5e60ce;
+  background-color: #80b192;
   padding: 25rem 0;
   margin-top: -20vh; }
 
@@ -724,7 +724,7 @@ textarea {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(83, 144, 217, 0.8), rgba(105, 48, 195, 0.8)), url(/public/img/nature-2-med.jpg);
+  background-image: linear-gradient(to right bottom, rgba(128, 177, 146, 0.8), rgba(75, 78, 109, 0.8)), url(/public/img/nature-2-med.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
@@ -732,7 +732,7 @@ textarea {
     transform: skewY(7deg); }
 
 .section-courses {
-  background-color: #f7f7f7;
+  background-color: #eee;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
 
@@ -742,7 +742,7 @@ textarea {
 
 .section-contact {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #5390d9, #6930c3); }
+  background-image: linear-gradient(to right bottom, #80b192, #4b4e6d); }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/public/img/yoga-2-med.jpg);
