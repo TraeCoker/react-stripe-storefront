@@ -36,7 +36,7 @@
             }
 
             &-3 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
         
@@ -72,7 +72,7 @@
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
             url(/public/img/class-16-med.jpg);
         }
     }
@@ -109,8 +109,8 @@
 
         &--3{
             background-image: linear-gradient(to right bottom,
-            rgba($color-secondary-light, .85),
-            rgba($color-secondary-dark, .85));
+            rgba($color-tertiary-light, .85),
+            rgba($color-tertiary-dark, .85));
         }
     }
 
