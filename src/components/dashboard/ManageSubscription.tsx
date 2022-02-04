@@ -127,12 +127,12 @@ export const ManageSubscriptions: React.FC = () => {
 
   return (
     <>
+        <h3>Manage Current Subscriptions</h3>
          <div>
           {user && userData()}
         </div>
 
         <div>
-          <h3>Manage Current Subscriptions</h3>
           <div>
             {subscriptions.map((sub) => (
               <div key={sub.id}>

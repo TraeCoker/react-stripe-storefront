@@ -68,25 +68,27 @@ export const SaveCard: React.FC = () => {
     return (
       <>
         <div className="dashboard__save-card">
-            <div>
+            <div className="dashboard__save-card--attach">
               <button className="btn btn--secondary"
                 onClick={createSetupIntent}
                 hidden={setupIntent? true : false}>
                 Attach New Credit Card 
               </button>
             </div>
-            <hr/>
-  
-            <form onSubmit={handleSubmit}  hidden={setupIntent? false : true}>
-  
+
+            <div className="dashboard__save-card--form">
+              <form onSubmit={handleSubmit}  hidden={setupIntent? false : true}>
                 <CardElement />
-                <button className="btn btn--secondary"
+                  <button className="btn btn--secondary"
                   type='submit'>
                   Attach
-                </button>
-            </form>
-  
-            <div>
+                  </button>
+              </form>
+            </div>
+            
+
+            <div className="dashboard__save-card--payments">
+              <hr/>
               <h3>Retrieve all Payment Resources</h3>
               <select>
                 {wallet.map((paymentSource: PaymentMethod) => (

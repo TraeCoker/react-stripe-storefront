@@ -734,6 +734,10 @@ textarea {
         text-align: left;
         font-size: 2rem;
         padding: 1rem; }
+        .dashboard__nav ul li:hover, .dashboard__nav ul li:active {
+          cursor: pointer;
+          color: #80b192;
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
         .dashboard__nav ul li:not(:last-child) {
           border-bottom: 1px solid #999; }
   .dashboard__user {
@@ -760,6 +764,10 @@ textarea {
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .dashboard__save-card--attach {
+    padding: 1rem; }
+  .dashboard__save-card--payments {
+    margin-top: 10rem; }
 
 .section-about {
   background-color: #f7f7f7;
