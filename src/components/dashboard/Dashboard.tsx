@@ -1,20 +1,9 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { auth, db } from '../helpers/firebase'
+import { AuthCheck } from 'reactfire';
+import { auth } from '../helpers/firebase'
 import Footer from '../layout/Footer';
 import { SaveCard } from './SaveCard';
-
-
-export function SignOut(props: any){
-  return props.user && (
-
-    <button className="btn btn--secondary" onClick={() => auth.signOut()}>
-      Sign Out User {props.user.uid}
-    </button>
-  )
-}
-
-
-
+import { SignIn } from './SignIn';
 
 export const Dashboard = (): JSX.Element => {
     const currentUser = auth.currentUser
@@ -22,6 +11,7 @@ export const Dashboard = (): JSX.Element => {
     return( 
       <>
         <section className="section-dashboard">
+        <AuthCheck fallback={<SignIn />}>
           <div className="dashboard">
             <div className="row">
 
@@ -57,7 +47,7 @@ export const Dashboard = (): JSX.Element => {
           
           
           </div>
-          
+          </AuthCheck>
         </section>
         <Footer />
       </>

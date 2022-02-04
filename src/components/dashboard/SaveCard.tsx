@@ -68,7 +68,6 @@ export const SaveCard: React.FC = () => {
     return (
       <>
         <div className="dashboard__save-card">
-          <AuthCheck fallback={<SignIn />}>
             <div>
               <button className="btn btn--secondary"
                 onClick={createSetupIntent}
@@ -98,7 +97,6 @@ export const SaveCard: React.FC = () => {
               <div>
                 <SignOut user={user} />
               </div>
-          </AuthCheck>
         </div>
         
   
