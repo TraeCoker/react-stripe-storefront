@@ -16,4 +16,32 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    &__nav {
+        padding: 2rem;
+
+        &-heading {
+            font-size: 2.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+    
+            li {
+                text-align: left;
+                font-size: 2rem;
+                padding: 1rem;
+    
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-dark-2;
+                }
+            }
+        }
+    }
 }

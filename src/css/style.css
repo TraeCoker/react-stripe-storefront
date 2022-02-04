@@ -716,6 +716,23 @@ textarea {
   transform: skewY(-7deg); }
   .dashboard > * {
     transform: skewY(7deg); }
+  .dashboard__nav {
+    padding: 2rem; }
+    .dashboard__nav-heading {
+      font-size: 2.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: left; }
+    .dashboard__nav ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .dashboard__nav ul li {
+        text-align: left;
+        font-size: 2rem;
+        padding: 1rem; }
+        .dashboard__nav ul li:not(:last-child) {
+          border-bottom: 1px solid #999; }
 
 .section-about {
   background-color: #f7f7f7;

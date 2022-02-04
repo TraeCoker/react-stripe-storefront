@@ -16,8 +16,8 @@ export const Dashboard = (): JSX.Element => {
             <div className="row">
 
               <div className="col-1-of-3">
-                <h1>Dashboard</h1>
-                <div className="dahboard__navigation">
+                <div className="dashboard__nav">
+                  <h3 className="heading-tertairy dashboard__nav-heading">Dashboard</h3>
                   <ul>
                     <li>Manage Subscription</li>
                     <li>Attach New Credit Card</li>
@@ -36,7 +36,7 @@ export const Dashboard = (): JSX.Element => {
               </div>
               <div className="col-1-of-3">
                 <div className="dashboard__user">
-                  <h1 className="heading-tertiary">Welcome back {currentUser?.displayName} </h1>
+                  <h1 className="heading-tertiary">Welcome back {currentUser?.displayName}</h1>
                   { currentUser && <img src={currentUser?.photoURL as string} alt="" />}
                 </div>
               
