@@ -180,7 +180,7 @@ function SubscribeToPlan() {
           <form onSubmit={handleSubmit} hidden={!plan}>
 
             <CardElement />
-            <button className="btn" 
+            <button className="btn btn--secondary" 
             type="submit" disabled={loading}>
               Subscribe and Pay
             </button>

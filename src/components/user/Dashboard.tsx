@@ -41,6 +41,7 @@ function SaveCard(): JSX.Element {
   const stripe: Stripe | null = useStripe();
   const elements = useElements();
   const user = useUser();
+  const currentUser = auth.currentUser
 
   const [setupIntent, setSetupIntent] = useState<SetupIntent | null>();
   const [wallet, setWallet] = useState<PaymentMethod[] | []>([]);
@@ -90,39 +91,43 @@ function SaveCard(): JSX.Element {
     }
   };
 
+  console.log(currentUser?.displayName)
   return (
     <>
-
-      <AuthCheck fallback={<SignIn />}>
-        <div>
-          <button
-            onClick={createSetupIntent}
-            hidden={setupIntent? true : false}>
-            Attach New Credit Card 
-          </button>
-        </div>
-        <hr/>
-
-        <form onSubmit={handleSubmit}>
-
-            <CardElement />
-            <button type='submit'>
-              Attach
-            </button>
-        </form>
-
-        <div>
-          <h3>Retrieve all Payment Resources</h3>
-          <select>
-            {wallet.map((paymentSource: PaymentMethod) => (
-              <CreditCard key={paymentSource.id} card={paymentSource.card!} />
-            ))}
-          </select>
-        </div>
+      <section className="section-dashboard">
+        <AuthCheck fallback={<SignIn />}>
+          <h1>Welcome back {currentUser?.displayName} </h1>
           <div>
-            <SignOut user={user}/>
+            <button
+              onClick={createSetupIntent}
+              hidden={setupIntent? true : false}>
+              Attach New Credit Card 
+            </button>
           </div>
-      </AuthCheck>
+          <hr/>
+
+          <form onSubmit={handleSubmit}>
+
+              <CardElement />
+              <button type='submit'>
+                Attach
+              </button>
+          </form>
+
+          <div>
+            <h3>Retrieve all Payment Resources</h3>
+            <select>
+              {wallet.map((paymentSource: PaymentMethod) => (
+                <CreditCard key={paymentSource.id} card={paymentSource.card!} />
+              ))}
+            </select>
+          </div>
+            <div>
+              <SignOut user={user}/>
+            </div>
+        </AuthCheck>
+      </section>
+      
 
     </>
   )
@@ -147,11 +152,11 @@ function CreditCard(props: Card) {
 
 export const Dashboard = (): JSX.Element => {
     return( 
-        <div>
+        <section className="section-dashboard">
           <h1>Dashboard</h1>
           <Suspense fallback={'loading user'}>
             <SaveCard/>
           </Suspense>
-        </div>
+        </section>
       );
 };
