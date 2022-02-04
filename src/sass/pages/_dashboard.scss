@@ -18,7 +18,10 @@
     }
 
     &__nav {
+        background-color: rgba($color-white, .8);
         padding: 2rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        border-radius: 3px;
 
         &-heading {
             font-size: 2.8rem;
@@ -46,9 +49,15 @@
     }
 
     &__user {
-        margin-top: 4rem;
+        background-color: rgba($color-white, .8);
+        border-radius: 3px;
+       
+        height: 25rem;
         text-align: center;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
         &-heading {
+            padding-top: 2rem;
             font-size: 2rem;
             font-weight: 500;
             text-transform: uppercase;
@@ -56,10 +65,20 @@
         }
 
         &-img {
+            margin-top: 2rem;
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
             -webkit-shape-outside: circle(50% at 50% 50%);
             shape-outside: circle(50% at 50% 50%);
         }
+    }
+
+    &__utilities {
+        background-color: rgba($color-white, .8);
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     }
 }

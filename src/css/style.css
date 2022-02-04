@@ -717,7 +717,10 @@ textarea {
   .dashboard > * {
     transform: skewY(7deg); }
   .dashboard__nav {
-    padding: 2rem; }
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: 3px; }
     .dashboard__nav-heading {
       font-size: 2.8rem;
       font-weight: 500;
@@ -734,17 +737,29 @@ textarea {
         .dashboard__nav ul li:not(:last-child) {
           border-bottom: 1px solid #999; }
   .dashboard__user {
-    margin-top: 4rem;
-    text-align: center; }
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    height: 25rem;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .dashboard__user-heading {
+      padding-top: 2rem;
       font-size: 2rem;
       font-weight: 500;
       text-transform: uppercase; }
     .dashboard__user-img {
+      margin-top: 2rem;
       -webkit-clip-path: circle(50% at 50% 50%);
       clip-path: circle(50% at 50% 50%);
       -webkit-shape-outside: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%); }
+  .dashboard__utilities {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 
 .section-about {
   background-color: #f7f7f7;
