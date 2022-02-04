@@ -703,6 +703,20 @@ textarea {
   top: 0;
   transform: rotate(-135deg); }
 
+.section-dashboard {
+  background-color: #5e60ce;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.dashboard {
+  background-color: #eee;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  width: 100%;
+  transform: skewY(-7deg); }
+  .dashboard > * {
+    transform: skewY(7deg); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;

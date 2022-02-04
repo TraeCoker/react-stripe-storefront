@@ -6,6 +6,7 @@ import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
 import { Stripe, SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
 import GoogleButton from 'react-google-button';
+import Footer from '../layout/Footer';
 
 
 
@@ -30,7 +31,7 @@ export function SignIn() {
 export function SignOut(props: any){
   return props.user && (
 
-    <button onClick={() => auth.signOut()}>
+    <button className="btn btn--secondary" onClick={() => auth.signOut()}>
       Sign Out User {props.user.uid}
     </button>
   )
@@ -94,11 +95,12 @@ function SaveCard(): JSX.Element {
   console.log(currentUser?.displayName)
   return (
     <>
-      <section className="section-dashboard">
+      <div className="dashboard">
         <AuthCheck fallback={<SignIn />}>
-          <h1>Welcome back {currentUser?.displayName} </h1>
+          <h1 className="heading-tertiary">Welcome back {currentUser?.displayName} </h1>
+            { currentUser && <img src={currentUser?.photoURL as string} alt="" />}
           <div>
-            <button
+            <button className="btn btn--secondary"
               onClick={createSetupIntent}
               hidden={setupIntent? true : false}>
               Attach New Credit Card 
@@ -109,7 +111,8 @@ function SaveCard(): JSX.Element {
           <form onSubmit={handleSubmit}>
 
               <CardElement />
-              <button type='submit'>
+              <button className="btn btn--secondary"
+                type='submit'>
                 Attach
               </button>
           </form>
@@ -126,7 +129,7 @@ function SaveCard(): JSX.Element {
               <SignOut user={user}/>
             </div>
         </AuthCheck>
-      </section>
+      </div>
       
 
     </>
@@ -152,11 +155,14 @@ function CreditCard(props: Card) {
 
 export const Dashboard = (): JSX.Element => {
     return( 
+      <>
         <section className="section-dashboard">
           <h1>Dashboard</h1>
           <Suspense fallback={'loading user'}>
             <SaveCard/>
           </Suspense>
         </section>
+        <Footer />
+      </>
       );
 };
