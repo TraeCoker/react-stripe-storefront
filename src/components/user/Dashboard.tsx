@@ -5,6 +5,7 @@ import { useUser, AuthCheck} from 'reactfire';
 import firebase from 'firebase/compat/app';
 import { auth, db } from '../helpers/firebase'
 import { Stripe, SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
+import GoogleButton from 'react-google-button';
 
 
 
@@ -18,9 +19,11 @@ export function SignIn() {
   };
 
   return (
-    <button onClick={signIn}>
-      Sign in with Google
-    </button>
+    <div className="google-btn">
+      <GoogleButton onClick={signIn} >
+        Sign in with Google
+      </GoogleButton>
+    </div>
   )
 };
 

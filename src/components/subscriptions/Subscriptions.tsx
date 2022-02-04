@@ -127,8 +127,9 @@ function SubscribeToPlan() {
 
   return (
     <>
-      <AuthCheck fallback={<SignIn />}>
+      
       <section className="section-sub" id="section-sub">
+      <AuthCheck fallback={<SignIn />}>
         <div className="u-center-text u-margin-bottom-big">
             <h2 className="heading-secondary">
                 Membership plans to fit your lifestyle
@@ -186,9 +187,9 @@ function SubscribeToPlan() {
           </form>
         </div>
       </div>
-        
+      </AuthCheck>
     </section>
-    </AuthCheck>
+    
         {/* <div>
           {user && userData()}
         </div>
