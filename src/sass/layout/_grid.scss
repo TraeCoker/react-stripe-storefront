@@ -31,11 +31,11 @@
                 margin-right: 0;
                 margin-bottom: $gutter-vertical-small;
             }
+        }
 
-            //one column for mobile
-            @include respond(tab-port) {
-                width: 100% !important;
-            }
+         //one column for mobile
+         @include respond(tab-port) {
+            width: 100% !important;
         }
     }
 
