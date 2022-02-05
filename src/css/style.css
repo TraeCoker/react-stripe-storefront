@@ -809,6 +809,9 @@ textarea {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media only screen and (max-width: 56.25rem) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -818,28 +821,54 @@ textarea {
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(7deg); }
+  @media only screen and (max-width: 56.25rem) {
+    .section-features {
+      padding: 10rem 0; } }
 
 .section-courses {
   background-color: #eee;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+  @media only screen and (max-width: 56.25rem) {
+    .section-courses {
+      padding: 20rem 0 10rem 0; } }
 
 .section-reviews {
   padding: 15rem 0;
   position: relative; }
+  @media only screen and (max-width: 56.25rem) {
+    .section-reviews {
+      padding: 10rem 0; } }
 
 .section-contact {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #80b192, #4b4e6d); }
+  @media only screen and (max-width: 56.25rem) {
+    .section-contact {
+      padding: 10rem 0; } }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/public/img/yoga-2-med.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 75rem) {
+    .contact {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(/public/img/yoga-2-med.jpg);
+      background-size: cover; } }
+  @media only screen and (max-width: 56.25rem) {
+    .contact {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/public/img/yoga-2-med.jpg);
+      background-size: cover; } }
   .contact__form {
     width: 50%;
     padding: 6rem; }
+    @media only screen and (max-width: 75rem) {
+      .contact__form {
+        width: 65%; } }
+    @media only screen and (max-width: 75rem) {
+      .contact__form {
+        width: 100%; } }
 
 .section-sub {
   background-color: #fff;
