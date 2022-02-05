@@ -541,9 +541,15 @@ textarea {
   padding: 6rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media only screen and (max-width: 56.25rem) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: -2rem; }
+    @media only screen and (max-width: 56.25rem) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
   .footer__logo {
     width: 30rem;
     height: auto; }
@@ -551,6 +557,10 @@ textarea {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media only screen and (max-width: 56.25rem) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -572,6 +582,9 @@ textarea {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media only screen and (max-width: 56.25rem) {
+      .footer__copyright {
+        width: 100%; } }
 
 .row {
   max-width: 114rem;
