@@ -531,6 +531,12 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media only screen and (max-width: 75rem) {
+    .form__input {
+      width: 50%; } }
+  @media only screen and (max-width: 56.25rem) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
