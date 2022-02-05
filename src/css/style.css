@@ -1,3 +1,10 @@
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet portrait
+900 - 1200px:     Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :        Big desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -705,7 +712,7 @@ textarea {
 
 .section-dashboard {
   background-color: #80b192;
-  padding: 25rem 0;
+  padding: 30rem 0;
   margin-top: -1vh; }
 
 .dashboard {
