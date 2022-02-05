@@ -44,10 +44,26 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75rem) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25rem) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5rem) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
+  @media only screen and (max-width: 56.25rem) {
+    body {
+      padding: 0; } }
+
+::selection {
+  background-color: #80b192;
+  color: #fff; }
 
 body {
   font-family: "Lato", sans-serif;
