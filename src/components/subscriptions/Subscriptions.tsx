@@ -178,12 +178,15 @@ function SubscribeToPlan() {
             </h3>
           
           <form onSubmit={handleSubmit} hidden={!plan}>
-
+              
             <CardElement />
-            <button className="btn btn--secondary" 
-            type="submit" disabled={loading}>
+            <div className="feature-box--pay-btn">
+              <button className="btn btn--secondary" 
+              type="submit" disabled={loading}>
               Subscribe and Pay
-            </button>
+              </button>
+            </div>
+            
           </form>
         </div>
       </div>
