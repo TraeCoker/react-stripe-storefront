@@ -578,6 +578,13 @@ textarea {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
+    @media only screen and (max-width: 56.25rem) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25rem) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -586,6 +593,13 @@ textarea {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25rem) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+      @media only screen and (max-width: 56.25rem) {
+        .row [class^="col-"]:not(:last-child) {
+          width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
