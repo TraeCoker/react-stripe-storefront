@@ -565,18 +565,31 @@ textarea {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media only screen and (max-width: 56.25rem) {
+    .review {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media only screen and (max-width: 37.5rem) {
+    .review {
+      transform: skewX(0); } }
   .review__shape {
     width: 15rem;
     height: 15rem;
     float: left;
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    overflow: hidden;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    border-radius: none; }
+    overflow: hidden; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .review__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
+    @media only screen and (max-width: 37.5rem) {
+      .review__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .review__img {
     height: 100%;
     transform: translateX(3rem) scale(2);
@@ -584,6 +597,9 @@ textarea {
     transition: all .5s; }
   .review__text {
     transform: skewX(12deg); }
+    @media only screen and (max-width: 37.5rem) {
+      .review__text {
+        transform: skewX(0); } }
   .review__caption {
     position: absolute;
     top: 50%;
