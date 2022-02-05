@@ -886,6 +886,9 @@ textarea {
   background-color: #80b192;
   padding: 30rem 0;
   margin-top: -1vh; }
+  @media only screen and (max-width: 56.25rem) {
+    .section-dashboard {
+      padding: 10rem 0; } }
 
 .dashboard {
   background-color: #eee;
@@ -900,6 +903,9 @@ textarea {
     padding: 2rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     border-radius: 3px; }
+    @media only screen and (max-width: 56.25rem) {
+      .dashboard__nav {
+        padding: 2rem; } }
     .dashboard__nav-heading {
       font-size: 2.8rem;
       font-weight: 500;
