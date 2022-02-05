@@ -22,7 +22,7 @@ export const Navigation: React.FC = () => {
                   <li className="navigation__item" ><HashLink to="/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>01</span>Home</HashLink></li>
                   <li className="navigation__item"><HashLink to="/#section-courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>
                   <li className="navigation__item"><HashLink to="/subscriptions/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>03</span>Subscriptions</HashLink></li>
-                  <li className="navigation__item"><Link to="/dashboard" className="navigation__link" onClick={() => setChecked(!checked)}><span>04</span>Dashboard</Link></li>
+                  <li className="navigation__item"><HashLink to="/dashboard/#dashboard" className="navigation__link" onClick={() => setChecked(!checked)}><span>04</span>Dashboard</HashLink></li>
               </ul>
           </nav>
       </div>

@@ -14,7 +14,7 @@ export const Dashboard = (): JSX.Element => {
 
     return( 
       <>
-        <section className="section-dashboard">
+        <section className="section-dashboard" id="dashboard">
         <AuthCheck fallback={<SignIn />}>
           <div className="dashboard">
             <div className="row">
