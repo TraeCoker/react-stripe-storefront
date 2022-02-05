@@ -1,4 +1,5 @@
-import { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+import * as Stripe from '@stripe/stripe-js';
 import { fetchFromAPI } from '../helpers/helpers';
 import {  CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser, AuthCheck } from 'reactfire';
@@ -9,6 +10,7 @@ import { User } from 'firebase/auth';
 import Header from '../layout/Header';
 import { HeaderData } from '../helpers/models';
 import Footer from '../layout/Footer';
+//import { Stripe } from '@stripe/stripe-js';
 
 interface UserDataProps {
   user: User
@@ -44,7 +46,7 @@ export const ManageSubscriptions: React.FC = () => {
 
   
   const [ plan, setPlan ] = useState<string | null>(null);
-  const [ subscriptions, setSubscriptions ] = useState< any[]>([]);
+  const [ subscriptions, setSubscriptions ] = useState<any[]>([]);
   const [ loading, setLoading ] = useState(false);
 
   useEffect(() => {
