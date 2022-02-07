@@ -11,7 +11,7 @@ import { SignOut } from './SignOut';
 
 
 export const SaveCard: React.FC = () => {
-    const stripe: Stripe | null = useStripe();
+    const stripe = useStripe();
     const elements = useElements();
     const user = useUser();
     

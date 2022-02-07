@@ -10,6 +10,7 @@ import { User } from 'firebase/auth';
 import Header from '../layout/Header';
 import { HeaderData } from '../helpers/models';
 import Footer from '../layout/Footer';
+import { ReactStripeElements } from 'react-stripe-elements'
 //import { Stripe } from '@stripe/stripe-js';
 
 interface UserDataProps {
@@ -42,7 +43,7 @@ function UserData(props: any): JSX.Element {
 export const ManageSubscriptions: React.FC = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const user = useUser();
+  const {data: user} = useUser();
 
   
   const [ plan, setPlan ] = useState<string | null>(null);

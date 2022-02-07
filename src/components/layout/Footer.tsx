@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
         <div className="footer__logo-box">
 
-            <img className="footer__logo" src="/img/logo-full-med.png" />
+            <img className="footer__logo" src="/img/logo-9-med.png" />
 
         </div>
         <div className="row">
