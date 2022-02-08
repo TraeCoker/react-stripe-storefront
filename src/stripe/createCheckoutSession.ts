@@ -1,5 +1,5 @@
 import { db } from "../components/helpers/firebase";
-import { useStripe } from "@stripe/react-stripe-js";
+import { stripePromise } from "..";
 
 export async function createCheckoutSession(uid: string) {
     console.log(uid)
@@ -17,7 +17,7 @@ export async function createCheckoutSession(uid: string) {
         checkoutSessionRef.onSnapshot(async (snap) => {
             const { sessionId } = snap.data()!;
             if (sessionId) {
-                const stripe = useStripe();
+                const stripe = await stripePromise;
                 stripe?.redirectToCheckout({sessionId});
             }
         })
