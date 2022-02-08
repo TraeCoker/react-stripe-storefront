@@ -10,7 +10,7 @@ export function SignIn() {
         new firebase.auth.GoogleAuthProvider()
       );
       const { uid, email} = credential.user;
-      db.collection('users').doc(uid).set({ email }, { merge: true });
+      db.collection('users').doc(uid).set({ email, uid }, { merge: true });
     };
   
     return (

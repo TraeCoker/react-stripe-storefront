@@ -9,6 +9,7 @@ import { User } from 'firebase/auth';
 import Header from '../layout/Header';
 import { HeaderData } from '../helpers/models';
 import Footer from '../layout/Footer';
+import { createCheckoutSession } from '../../stripe/createCheckoutSession';
 
 interface UserDataProps {
   user: User
@@ -41,7 +42,7 @@ function SubscribeToPlan() {
   const stripe = useStripe();
   const elements = useElements();
   const user = useUser();
-
+  
   
   const [ plan, setPlan ] = useState<string | null>(null);
   const [ subscriptions, setSubscriptions ] = useState< any[]>([]);
@@ -125,6 +126,7 @@ function SubscribeToPlan() {
     }
   }
 
+  console.log(user.data!.uid)
   return (
     <>
       
@@ -146,7 +148,8 @@ function SubscribeToPlan() {
                 </ul>
                 </p>
                 <button className="btn btn--secondary"
-                  onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
+                  
+                  onClick={() => createCheckoutSession(user.data!.uid)}>
                   Choose Monthly $25/m
                 </button>
               </div>
