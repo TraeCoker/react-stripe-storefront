@@ -1,15 +1,26 @@
-import {  useState } from 'react';
+import {  useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../helpers/firebase';
 import { useAuth, useUser } from 'reactfire';
 import { HashLink} from 'react-router-hash-link';
 import usePremiumStatus from '../../stripe/usePremiumStatus';
+import isUserPremium from '../../stripe/isUserPremium';
 
 
 export const Navigation: React.FC = () => {
     const [checked, setChecked] = useState(false);
-    const user = auth.currentUser!
-    const userIsPremium = usePremiumStatus(user)
+    const [premiumStatus, setPremiumStatus ] = useState<boolean>(false);
+    const user = useUser()
+
+    useEffect(() => {
+        if(user){
+            const checkPremiumStatus = async function() {
+                setPremiumStatus(await isUserPremium());
+            };
+            checkPremiumStatus();
+        }
+    }, [user]);
+
 
     // const determineCourseRoute = async () => {
     //     const showPremium = await isUserPremium();
@@ -36,8 +47,8 @@ export const Navigation: React.FC = () => {
               <ul className="navigation__list">
                   <li className="navigation__item" ><HashLink to="/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>01</span>Home</HashLink></li>
 
-                  {userIsPremium && <li className="navigation__item"><HashLink to="/courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>}
-                  {!userIsPremium && <li className="navigation__item"><HashLink to="/#section-courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>}
+                  {premiumStatus && <li className="navigation__item"><HashLink to="/courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>}
+                  {!premiumStatus && <li className="navigation__item"><HashLink to="/#section-courses" className="navigation__link" onClick={() => setChecked(!checked)}><span>02</span>Courses</HashLink></li>}
         
                   <li className="navigation__item"><HashLink to="/subscriptions/#top" className="navigation__link" onClick={() => setChecked(!checked)}><span>03</span>Subscriptions</HashLink></li>
                   <li className="navigation__item"><HashLink to="/dashboard/#dashboard" className="navigation__link" onClick={() => setChecked(!checked)}><span>04</span>Dashboard</HashLink></li>

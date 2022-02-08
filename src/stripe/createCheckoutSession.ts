@@ -9,7 +9,7 @@ export async function createCheckoutSession(uid: string) {
         .collection("checkout_sessions")
         .add({
             price: "price_1KQJYNEFpPobBmTkJRfRGC1S",
-            success_url: window.location.origin,
+            success_url: "http://localhost:3001/courses",
             cancel_url: window.location.origin,
         });
 

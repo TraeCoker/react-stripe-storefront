@@ -1,5 +1,6 @@
 import React from 'react';
 import { AuthProvider, useFirebaseApp  } from 'reactfire';
+import usePremiumStatus from './stripe/usePremiumStatus';
 import { getAuth } from 'firebase/auth';
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './components/home/Home';
@@ -8,6 +9,7 @@ import { Subscriptions } from './components/subscriptions/Subscriptions';
 import { Dashboard } from './components/dashboard/Dashboard';
 import { Navigation } from './components/layout/Navigation';
 import './css/style.css'
+import { auth } from './components/helpers/firebase';
 
 
 
@@ -16,6 +18,7 @@ import './css/style.css'
 const App = (): JSX.Element => {
   const app = useFirebaseApp();
   const auth = getAuth(app);
+  
 
   return (
     <AuthProvider sdk={auth}>

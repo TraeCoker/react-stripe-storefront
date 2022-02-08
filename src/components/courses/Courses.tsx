@@ -4,9 +4,16 @@ import { HeaderData } from "../helpers/models";
 import usePremiumStatus from "../../stripe/usePremiumStatus";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
+import { Navigate } from "react-router-dom";
 
 
 export const Courses: React.FC = ()=> {
+    // const user = auth.currentUser!
+    // const userIsPremium = usePremiumStatus(user)
+
+    // if (!userIsPremium){
+    //   return <Navigate  to="/" />
+    // }
     const headerData: HeaderData = {
       mainHeading: "WELCOME HOME",
       subHeading: "Thank you for subscribing!", 
