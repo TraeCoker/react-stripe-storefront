@@ -1,0 +1,8 @@
+.section-courses-page {
+    padding: 30rem 0;
+    position: relative;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+}
