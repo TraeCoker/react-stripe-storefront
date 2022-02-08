@@ -33,6 +33,9 @@ export const Courses: React.FC = ()=> {
             <h2 className="heading-secondary">
                 Thank you for subscribing!
             </h2>
+            <div className="u-center-text u-margin-top-xl">
+              <button className="btn btn--secondary">Start your next course</button>
+            </div>
         </div>
         </section>
       <Footer />

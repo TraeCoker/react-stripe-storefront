@@ -102,7 +102,7 @@ export const courses: Course[] = [
         product: {
             name: "Mindful Mastery",
             description: "Master your inner world and gain self knowledge",
-            images: [ 'img/yoga-4-med.jpg' ],
+            images: [ 'img/yoga-4-med.jpg', 'img/mockup.png' ],
             amount: 15000,
             currency: 'usd',
             quantity: 1

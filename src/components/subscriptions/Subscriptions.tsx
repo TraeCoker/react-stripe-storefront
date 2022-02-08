@@ -126,6 +126,12 @@ function SubscribeToPlan() {
     }
   }
 
+  const handleNewSubmit = (e: any) => {
+    setLoading(true);
+    e.preventDefault();
+    createCheckoutSession(user.data!.uid)
+  }
+
   console.log(user.data!.uid)
   return (
     <>
@@ -149,7 +155,7 @@ function SubscribeToPlan() {
                 </p>
                 <button className="btn btn--secondary"
                   
-                  onClick={() => createCheckoutSession(user.data!.uid)}>
+                  onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
                   Choose Monthly $25/m
                 </button>
               </div>
@@ -180,9 +186,9 @@ function SubscribeToPlan() {
               </strong>
             </h3>
           
-          <form onSubmit={handleSubmit} hidden={!plan}>
+          <form onSubmit={handleNewSubmit} hidden={!plan}>
               
-            <CardElement />
+            
             <div className="feature-box--pay-btn">
               <button className="btn btn--secondary" 
               type="submit" disabled={loading}>
