@@ -132,7 +132,7 @@ function SubscribeToPlan() {
     createCheckoutSession(user.data!.uid)
   }
 
-  console.log(user.data!.uid)
+ 
   return (
     <>
       
@@ -151,6 +151,8 @@ function SubscribeToPlan() {
                 <p className="paragraph">
                 <ul>
                   <li>$25 a month</li>
+                  <li>Access to all premium courses</li>
+                  <li>Weekly digital meetups</li>
                 </ul>
                 </p>
                 <button className="btn btn--secondary"
@@ -167,6 +169,8 @@ function SubscribeToPlan() {
               <p className="paragraph">
                 <ul>
                   <li>$50 Quarterly</li>
+                  <li>Discounted rate</li>
+                  <li>Monthly coaching sessions</li>
                 </ul>
                 </p>
                 <button className="btn btn--secondary"

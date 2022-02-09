@@ -41,12 +41,14 @@ export const Checkout: React.FC<Props>= ({product, setToggle}) => {
     <>
       <div className="popup__left">
         <img src={product.images[0]} alt="Course photo" className="popup__img" />
+        <img src={product.images[1]} alt="Course photo" className="popup__img" />
       </div>
       <div className="popup__right">
         <a href="#section-tours" className="popup__close" onClick={() => setToggle(false)}>&times;</a>
         <h2 className="heading__secondary u-margin-bottom-small">{product.name}</h2>
         <h3 className="heading__tertiary">${amount.substring(0, amount.length - 2)}</h3>
         <p className="popup__text">{product.description}</p>
+        <p className="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique. Rhoncus urna neque viverra justo. </p>
         <button
         onClick={handleClick}
         className="btn btn--secondary">
