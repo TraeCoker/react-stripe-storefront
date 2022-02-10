@@ -3,7 +3,7 @@
 The SOURCE is a mockup e-commerce storefront built for a a health coaching company selling digital courses and subscription services.
 
 ## Demo
-![Demo](img/The-Source.gif)
+![Demo](https://github.com/TraeCoker/react-stripe-storefront/blob/main/public/img/The-Source.gif?raw=true)
 
 
 
