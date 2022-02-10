@@ -7,6 +7,7 @@ The SOURCE is a mockup e-commerce storefront built for a a health coaching compa
 
 
 ## Installation
+(backend node server: https://github.com/TraeCoker/node-stripe-server-demo)
 
 Clone the frontend to your local machine and run:
 ```bash
