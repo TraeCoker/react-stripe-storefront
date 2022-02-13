@@ -22,16 +22,6 @@ export const Navigation: React.FC = () => {
     }, [user]);
 
 
-    // const determineCourseRoute = async () => {
-    //     const showPremium = await isUserPremium();
-
-    //     if (showPremium === true ){
-    //         return "/courses"
-    //     } else {
-    //         return "/#section-courses"
-    //     }
-    // }
-    
   return(
       <div className="navigation">
           <input type="checkbox" className="navigation__checkbox" 

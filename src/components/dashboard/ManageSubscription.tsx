@@ -11,7 +11,7 @@ import Header from '../layout/Header';
 import { HeaderData } from '../helpers/models';
 import Footer from '../layout/Footer';
 import { ReactStripeElements } from 'react-stripe-elements'
-//import { Stripe } from '@stripe/stripe-js';
+
 
 interface UserDataProps {
   user: User
