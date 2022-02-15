@@ -84,7 +84,7 @@ export const courses: Course[] = [
         product: {
             name: "THRIVE Nutrition",
             description: "Fuel your body with this 12 week nutrition course",
-            images: [ 'img/food-3-med.jpg' ],
+            images: [ 'img/food-4-med.jpg', 'img/food-3-med.jpg' ],
             amount: 15000,
             currency: 'usd',
             quantity: 1
@@ -120,7 +120,7 @@ export const courses: Course[] = [
         product: {
             name: "Functional Strength",
             description: "Let movement be your medicine. Regain ranges of motion and gain strength.",
-            images: [ 'img/food-3-med.jpg' ],
+            images: [ 'img/yoga-6-med.jpg', 'img/course-mockup.png' ],
             amount: 15000,
             currency: 'usd',
             quantity: 1
