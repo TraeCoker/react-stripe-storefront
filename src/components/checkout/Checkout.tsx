@@ -3,15 +3,6 @@ import { fetchFromAPI } from '../helpers/helpers';
 import { useStripe } from '@stripe/react-stripe-js';
 import { Product } from '../helpers/models';
 
-// interface CheckoutProduct {
-//   name: string,
-//   description: string,
-//   images: string[],
-//   amount: number,
-//   currency: string,
-//   quantity: number,
-// }
-
 interface Props {
   product: Product;
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
