@@ -1,16 +1,11 @@
-import React, { useState, useEffect, Suspense } from 'react';
-import * as Stripe from '@stripe/stripe-js';
+import React, { useState, useEffect} from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import {  CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { useUser, AuthCheck } from 'reactfire';
+import { useUser} from 'reactfire';
 import { db } from '../helpers/firebase';
-import { SignIn } from '../dashboard/SignIn';
 import { DocumentData } from 'firebase/firestore';
 import { User } from 'firebase/auth';
-import Header from '../layout/Header';
-import { HeaderData } from '../helpers/models';
-import Footer from '../layout/Footer';
-import { ReactStripeElements } from 'react-stripe-elements'
+
 
 
 interface UserDataProps {
