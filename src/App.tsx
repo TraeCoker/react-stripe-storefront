@@ -30,6 +30,8 @@ const App = (): JSX.Element => {
         <Route path="/courses" element={ <Courses /> } />
         <Route path="/subscriptions" element={ <Subscriptions /> } />
         <Route path="/dashboard" element={ <Dashboard /> } />
+        <Route path="/failed" element={ <Home />} />
+        <Route path="/success*" element={ <Dashboard />} />
       </Routes>
     </div>
     </AuthProvider>

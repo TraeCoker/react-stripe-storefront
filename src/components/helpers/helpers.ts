@@ -8,7 +8,6 @@ type Opts = {
     /**Optional body for 'POST' and 'PATCH' requests */
     body?: {},
 };
-
 export async function fetchFromAPI(endpointURL: string, opts?: Opts): Promise<any> {
     const { method, body } = {method: 'POST', body: null, ...opts };
 
