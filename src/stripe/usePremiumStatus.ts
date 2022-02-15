@@ -14,6 +14,5 @@ export default function usePremiumStatus(user: firebase.User) {
         }
     }, [user]);
 
-    console.log(premiumStatus);
     return premiumStatus;
 }

@@ -13,7 +13,6 @@ export async function createCheckoutSession(uid: string, price: string) {
             cancel_url: window.location.origin,
         });
 
-        console.log(checkoutSessionRef)
         checkoutSessionRef.onSnapshot(async (snap) => {
             const { sessionId } = snap.data()!;
             if (sessionId) {
