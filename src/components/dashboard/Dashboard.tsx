@@ -7,7 +7,7 @@ import { SaveCard } from './SaveCard';
 import { SignIn } from './SignIn';
 import { SignOut } from './SignOut';
 
-export const Dashboard = (): JSX.Element => {
+export const Dashboard: React.FC = () => {
     const userAuth = useUser();
     const currentUser = auth.currentUser
     const [toggleComponent, setToggleComponent] = useState(0);
