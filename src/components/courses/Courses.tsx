@@ -1,10 +1,5 @@
-import { Checkout } from "../checkout/Checkout";
-import { auth } from "../helpers/firebase";
-import { HeaderData } from "../helpers/models";
-import usePremiumStatus from "../../stripe/usePremiumStatus";
-import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import { Navigate } from "react-router-dom";
+
 
 
 export const Courses: React.FC = ()=> {
