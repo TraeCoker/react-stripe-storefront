@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 import { HeaderData } from '../helpers/models'
 
 const Header: React.FC<HeaderData> = ({mainHeading, subHeading, page, buttonText}) => {

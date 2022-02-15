@@ -1,6 +1,4 @@
-import React, { Children, ReactChild } from 'react'
-import { Checkout } from '../checkout/Checkout'
-import { Product } from '../helpers/models'
+import React from 'react'
 
 const Popup: React.FC= ({children}) => {
 

@@ -1,9 +1,6 @@
 import {  useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { auth } from '../helpers/firebase';
-import { useAuth, useUser } from 'reactfire';
+import { useUser } from 'reactfire';
 import { HashLink} from 'react-router-hash-link';
-import usePremiumStatus from '../../stripe/usePremiumStatus';
 import isUserPremium from '../../stripe/isUserPremium';
 
 
