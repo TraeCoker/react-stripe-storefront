@@ -23,7 +23,6 @@ export async function fetchFromAPI(endpointURL: string, opts?: Opts): Promise<an
             Authorization: `Bearer ${token}`,
         },
     });
-    console.log(user)
-    console.log(token)
+    
     return res.json();
 }
