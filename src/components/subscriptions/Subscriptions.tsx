@@ -8,11 +8,11 @@ import { createCheckoutSession } from '../../stripe/createCheckoutSession';
 
 function SubscribeToPlan() {
   const user = useUser();
-  const [ plan, setPlan ] = useState<string>('');
+  const [ plan, setPlan ] = useState('');
   const [ loading, setLoading ] = useState(false);
 
   
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     e.preventDefault();
     createCheckoutSession(user.data!.uid, plan)
