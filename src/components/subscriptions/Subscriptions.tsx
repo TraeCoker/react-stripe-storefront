@@ -44,7 +44,7 @@ function SubscribeToPlan() {
   const user = useUser();
   
   
-  const [ plan, setPlan ] = useState<string | null>(null);
+  const [ plan, setPlan ] = useState<string>('');
   const [ subscriptions, setSubscriptions ] = useState< any[]>([]);
   const [ loading, setLoading ] = useState(false);
 
@@ -116,7 +116,7 @@ function SubscribeToPlan() {
     }
 
     setLoading(false);
-    setPlan(null);
+    setPlan('');
   };
 
 
@@ -129,7 +129,7 @@ function SubscribeToPlan() {
   const handleNewSubmit = (e: any) => {
     setLoading(true);
     e.preventDefault();
-    createCheckoutSession(user.data!.uid)
+    createCheckoutSession(user.data!.uid, plan)
   }
 
  
@@ -157,7 +157,7 @@ function SubscribeToPlan() {
                 </p>
                 <button className="btn btn--secondary"
                   
-                  onClick={() => setPlan('price_1KHf5OEFpPobBmTk37NB2k5c')}>
+                  onClick={() => setPlan('price_1KQJYNEFpPobBmTkJRfRGC1S')}>
                   Choose Monthly $25/m
                 </button>
               </div>
@@ -174,7 +174,7 @@ function SubscribeToPlan() {
                 </ul>
                 </p>
                 <button className="btn btn--secondary"
-                  onClick={() => setPlan('price_1KHf5OEFpPobBmTkLpTaKnk4')}>
+                  onClick={() => setPlan('price_1KQJYNEFpPobBmTkmN3X2w5F')}>
                   Choose Quarterly $50/q 
                 </button>
               </div>
@@ -185,8 +185,8 @@ function SubscribeToPlan() {
           <div className="feature-box feature-box--pay">
             <h3 className="heading-tertiary">Selected Plan: 
               <strong>{
-                plan === 'price_1KHf5OEFpPobBmTk37NB2k5c' && ' $25 monthly Subscription' || 
-                plan === 'price_1KHf5OEFpPobBmTkLpTaKnk4' && ' $50 quarterly Subscription' }
+                plan === 'price_1KQJYNEFpPobBmTkJRfRGC1S' && ' $25 monthly Subscription' || 
+                plan === 'price_1KQJYNEFpPobBmTkmN3X2w5F' && ' $50 quarterly Subscription' }
               </strong>
             </h3>
           

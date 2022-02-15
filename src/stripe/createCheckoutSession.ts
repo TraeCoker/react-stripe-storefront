@@ -1,14 +1,14 @@
 import { db } from "../components/helpers/firebase";
 import { stripePromise } from "..";
 
-export async function createCheckoutSession(uid: string) {
+export async function createCheckoutSession(uid: string, price: string) {
     console.log(uid)
     const checkoutSessionRef = await db
         .collection("users")
         .doc(uid)
         .collection("checkout_sessions")
         .add({
-            price: "price_1KQJYNEFpPobBmTkJRfRGC1S",
+            price,
             success_url: "http://localhost:3001/courses",
             cancel_url: window.location.origin,
         });
