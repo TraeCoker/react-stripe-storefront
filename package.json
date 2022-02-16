@@ -28,6 +28,7 @@
   },
   "scripts": {
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
