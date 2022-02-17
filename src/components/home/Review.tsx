@@ -7,7 +7,7 @@ const Review: React.FC<ReviewObject> = ({name, imageURL, heading, text}) => {
       <div className="row">
         <div className="review">
             <figure className="review__shape">
-                <img src={imageURL} alt="picture of a smiling reviewer" className="review__img" />
+                <img src={imageURL} alt="a smiling reviewer" className="review__img" />
                 <figcaption className='review__caption'>{name}</figcaption>
             </figure>
             <div className="review__text">

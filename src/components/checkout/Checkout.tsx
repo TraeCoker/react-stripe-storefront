@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import { useStripe } from '@stripe/react-stripe-js';
 import { Product } from '../helpers/models';
@@ -31,8 +31,8 @@ export const Checkout: React.FC<Props>= ({product, setToggle}) => {
   return ( 
     <>
       <div className="popup__left">
-        <img src={product.images[0]} alt="Course photo" className="popup__img" />
-        <img src={product.images[1]} alt="Course photo" className="popup__img" />
+        <img src={product.images[0]} alt="Course preview" className="popup__img" />
+        <img src={product.images[1]} alt="Course preview" className="popup__img" />
       </div>
       <div className="popup__right">
         <a href="#section-tours" className="popup__close" onClick={() => setToggle(false)}>&times;</a>

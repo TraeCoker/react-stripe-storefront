@@ -1,6 +1,4 @@
-import React from 'react';
 import { AuthProvider, useFirebaseApp  } from 'reactfire';
-import usePremiumStatus from './stripe/usePremiumStatus';
 import { getAuth } from 'firebase/auth';
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './components/home/Home';
@@ -9,7 +7,7 @@ import { Subscriptions } from './components/subscriptions/Subscriptions';
 import { Dashboard } from './components/dashboard/Dashboard';
 import { Navigation } from './components/layout/Navigation';
 import './css/style.css'
-import { auth } from './components/helpers/firebase';
+
 
 
 

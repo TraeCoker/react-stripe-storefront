@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { AuthCheck, useUser } from 'reactfire';
 import { auth } from '../helpers/firebase'
 import Footer from '../layout/Footer';

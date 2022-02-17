@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { useUser, AuthCheck} from 'reactfire';
-import { Stripe, SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
-import { SignIn } from './SignIn';
-import { SignOut } from './SignOut';
+import { useUser} from 'reactfire';
+import { SetupIntent, StripeCardElement, PaymentMethod} from '@stripe/stripe-js';
 
 
 

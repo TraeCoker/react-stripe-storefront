@@ -71,8 +71,8 @@ function SubscribeToPlan() {
           <div className="feature-box feature-box--pay">
             <h3 className="heading-tertiary">Selected Plan: 
               <strong>{
-                plan === 'price_1KQJYNEFpPobBmTkJRfRGC1S' && ' $25 monthly Subscription' || 
-                plan === 'price_1KQJYNEFpPobBmTkmN3X2w5F' && ' $50 quarterly Subscription' }
+                (plan === 'price_1KQJYNEFpPobBmTkJRfRGC1S' && ' $25 monthly Subscription') || 
+                (plan === 'price_1KQJYNEFpPobBmTkmN3X2w5F' && ' $50 quarterly Subscription') }
               </strong>
             </h3>
           
