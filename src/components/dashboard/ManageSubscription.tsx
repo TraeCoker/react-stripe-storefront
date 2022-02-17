@@ -65,57 +65,6 @@ export const ManageSubscriptions: React.FC = () => {
     setLoading(false);
   };
   
-  const handleSubmit = async (event: any) => {
-    setLoading(true);
-    event.preventDefault();
-
-    const cardElement = elements?.getElement(CardElement)!;
-
-
-    const { paymentMethod, error } = await stripe!.createPaymentMethod({
-      type: 'card',
-      card: cardElement,
-    });
-  
-
-    if (error) {
-      alert(error.message);
-      setLoading(false);
-      return;
-    };
-
-    const subscription = await fetchFromAPI('subscriptions', {
-      body: {
-        plan, 
-        payment_method: paymentMethod!.id,
-      },
-    });
-
-    const { latest_invoice } = subscription;
-
-    if (latest_invoice.payment_intent) {
-      const { client_secret, status } = latest_invoice.payment_intent;
-
-      if(status === 'requires_action') {
-        const { error: confirmationError } = await stripe!.confirmCardPayment(
-          client_secret
-        );
-
-        if (confirmationError) {
-          console.error(confirmationError);
-          alert('unable to confirm card');
-          return
-        }
-      }
-
-      alert('You are subscribed!');
-      getSubscriptions();
-    }
-
-    setLoading(false);
-    setPlan(null);
-  };
-
 
   const userData = () => {
     if (typeof user !== null){
