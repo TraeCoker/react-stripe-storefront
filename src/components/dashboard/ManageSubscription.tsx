@@ -31,15 +31,18 @@ export const ManageSubscriptions: React.FC = () => {
   return (
     <>
         <h3>Manage Current Subscriptions</h3>
-      
         <div>
-          <div>
+          <div className="dashboard__manage-subs--text">
+            <h2 className="u-margin-bottom-small">{subscriptions.length < 1 && 'No current subscriptions'}</h2>
             {subscriptions.map((sub) => (
               <div key={sub.id}>
-                <h2>{sub.plan.id === 'price_1KQJYNEFpPobBmTkJRfRGC1S' && 'Monthly Membership Plan'}</h2>
+                <h2 className="u-margin-bottom-small">{sub.plan.id === 'price_1KQJYNEFpPobBmTkJRfRGC1S' && 'Monthly Membership Plan'}</h2>
+                <h2 className="u-margin-bottom-small">{sub.plan.id === 'price_1KQJYNEFpPobBmTkmN3X2w5F' && 'PRO Membership Plan'}</h2>
+
                 <h3>Next payment of ${sub.plan.amount_decimal.substring(0, sub.plan.amount_decimal.length - 2)} due:{' '}</h3>
-                <p>{new Date(sub.current_period_end * 1000).toUTCString()}</p>
-                <button
+                <p className="u-margin-bottom-small">{new Date(sub.current_period_end * 1000).toUTCString()}</p>
+
+                <button className="btn btn--secondary"
                   onClick={() => cancel(sub.id)}
                   disabled={loading}>
                   Cancel

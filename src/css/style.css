@@ -953,6 +953,8 @@ textarea {
     padding: 1rem; }
   .dashboard__save-card--payments {
     margin-top: 10rem; }
+  .dashboard__manage-subs--text {
+    margin-top: 2rem; }
 
 .section-about {
   background-color: #f7f7f7;
