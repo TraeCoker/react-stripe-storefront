@@ -1,6 +1,6 @@
 import { auth } from './firebase';
-const cloudAPI = 'https://stripe-backend-tvyqwzjtta-uc.a.run.app'
-const API = 'http://localhost:3000';
+const API = 'https://stripe-backend-tvyqwzjtta-uc.a.run.app'
+//const API = 'http://localhost:3000';
 
 type Opts = {
     /**Requests other than default 'POST' */
