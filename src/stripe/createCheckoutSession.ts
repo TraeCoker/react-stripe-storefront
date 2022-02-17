@@ -9,7 +9,7 @@ export async function createCheckoutSession(uid: string, price: string) {
         .collection("checkout_sessions")
         .add({
             price,
-            success_url: "https://the-source.netlify.app//courses",
+            success_url: "https://the-source.netlify.app/courses",
             cancel_url: window.location.origin,
         });
 
