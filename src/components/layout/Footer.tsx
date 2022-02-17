@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="col-1-of-2">
                 <p className="footer__copyright">
-                    Built by <a href="#" className="footer__link">Trae Coker</a> for his portfolio and demo purposes.
+                    Built by <a href="#" className="footer__link">Trae Coker</a> for his portfolio and demo purposes. UI layout inspired by Jonas Schmedtmann and his advanced CSS course.
                 </p>
             </div>
         </div>
