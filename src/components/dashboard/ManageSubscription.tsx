@@ -1,17 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import { fetchFromAPI } from '../helpers/helpers';
-import { useStripe, useElements } from '@stripe/react-stripe-js';
 import { useUser} from 'reactfire';
 
-
-
 export const ManageSubscriptions: React.FC = () => {
-  const stripe = useStripe();
-  const elements = useElements();
   const {data: user} = useUser();
-
-  
-  const [ plan, setPlan ] = useState<string | null>(null);
   const [ subscriptions, setSubscriptions ] = useState<any[]>([]);
   const [ loading, setLoading ] = useState(false);
 
