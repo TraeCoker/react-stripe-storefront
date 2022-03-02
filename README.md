@@ -2,7 +2,7 @@
 
 The SOURCE is a mockup e-commerce storefront built for a a health coaching company selling digital courses and subscription services. Built using React and uses Stripe to process payments. Recurring payments are integrated through Firebase on the backend and routed with a Node server.
 
-https://the-source.netlify.app/
+Demo live at: https://the-source.netlify.app/
 ## Demo
 ![Demo](https://github.com/TraeCoker/react-stripe-storefront/blob/main/public/img/The-Source.gif?raw=true)
 
